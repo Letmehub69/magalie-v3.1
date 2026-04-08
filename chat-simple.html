@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chats - Version Simple</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+        
+        header {
+            background: #4a6fa5;
+            color: white;
+            padding: 1rem 2rem;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .cat-icon {
+            font-size: 4rem;
+            margin: 1rem 0;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        .section {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        h2 {
+            color: #4a6fa5;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #ff7b54;
+            padding-bottom: 0.5rem;
+        }
+        
+        .cat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .cat-item {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+            border: 2px solid #e9ecef;
+            transition: transform 0.3s;
+        }
+        
+        .cat-item:hover {
+            transform: translateY(-5px);
+            border-color: #4a6fa5;
+        }
+        
+        .cat-emoji {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: #333;
+            color: white;
+            margin-top: 2rem;
+        }
+        
+        .fun-fact {
+            background: #ff7b54;
+            color: white;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            font-weight: bold;
+        }
+        
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .section {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🐱 Le Monde des Chats 🐱</h1>
+        <div class="cat-icon">😸</div>
+        <p>Découvrez la beauté et la grâce des félins</p>
+    </header>
+    
+    <main>
+        <section class="section">
+            <h2>Pourquoi les chats sont géniaux</h2>
+            <p>Les chats sont des compagnons indépendants, élégants et affectueux. Voici quelques raisons de les aimer :</p>
+            
+            <div class="fun-fact">
+                💡 Saviez-vous ? Les chats passent environ 70% de leur vie à dormir !
+            </div>
+            
+            <ul style="margin-left: 1.5rem; margin-top: 1rem;">
+                <li>Ils sont propres et autonomes</li>
+                <li>Leur ronronnement est apaisant</li>
+                <li>Ils chassent les rongeurs</li>
+                <li>Ils sont très photogéniques !</li>
+            </ul>
+        </section>
+        
+        <section class="section">
+            <h2>Types de chats populaires</h2>
+            <div class="cat-grid">
+                <div class="cat-item">
+                    <div class="cat-emoji">😺</div>
+                    <h3>Chat domestique</h3>
+                    <p>Le compagnon parfait</p>
+                </div>
+                <div class="cat-item">
+                    <div class="cat-emoji">😸</div>
+                    <h3>Chat joueur</h3>
+                    <p>Toujours prêt à s'amuser</p>
+                </div>
+                <div class="cat-item">
+                    <div class="cat-emoji">😹</div>
+                    <h3>Chat rieur</h3>
+                    <p>Apporte la joie</p>
+                </div>
+                <div class="cat-item">
+                    <div class="cat-emoji">😻</div>
+                    <h3>Chat amoureux</h3>
+                    <p>Plein d'affection</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>Conseils pour les propriétaires</h2>
+            <p>Prendre soin d'un chat est simple avec ces conseils :</p>
+            <ol style="margin-left: 1.5rem; margin-top: 1rem;">
+                <li>Nourrissez-le avec des aliments de qualité</li>
+                <li>Fournissez de l'eau fraîche quotidiennement</li>
+                <li>Nettoyez régulièrement la litière</li>
+                <li>Jouez avec lui pour le stimuler</li>
+                <li>Visitez le vétérinaire chaque année</li>
+            </ol>
+        </section>
+    </main>
+    
+    <footer>
+        <p>🐾 Page créée avec amour pour tous les amis des chats 🐾</p>
+        <p style="margin-top: 1rem; font-size: 0.9rem; color: #ccc;">
+            © 2023 - Tous droits réservés aux chats !
+        </p>
+    </footer>
+    
+    <script>
+        // Animation simple pour les emojis
+        document.addEventListener('DOMContentLoaded', function() {
+            const catEmojis = document.querySelectorAll('.cat-emoji');
+            
+            catEmojis.forEach(emoji => {
+                emoji.addEventListener('mouseover', function() {
+                    this.style.transform = 'scale(1.2)';
+                    this.style.transition = 'transform 0.3s';
+                });
+                
+                emoji.addEventListener('mouseout', function() {
+                    this.style.transform = 'scale(1)';
+                });
+            });
+            
+            // Changer le fait amusant toutes les 10 secondes
+            const funFacts = [
+                "💡 Saviez-vous ? Les chats ont 32 muscles dans chaque oreille !",
+                "💡 Saviez-vous ? Un chat peut sauter jusqu'à 6 fois sa taille !",
+                "💡 Saviez-vous ? Les chats ne peuvent pas goûter le sucré !",
+                "💡 Saviez-vous ? Les chats dorment environ 16 heures par jour !"
+            ];
+            
+            let factIndex = 0;
+            const funFactElement = document.querySelector('.fun-fact');
+            
+            if (funFactElement) {
+                setInterval(() => {
+                    factIndex = (factIndex + 1) % funFacts.length;
+                    funFactElement.textContent = funFacts[factIndex];
+                    funFactElement.style.animation = 'none';
+                    setTimeout(() => {
+                        funFactElement.style.animation = 'fadeIn 0.5s';
+                    }, 10);
+                }, 10000);
+            }
+            
+            // Ajouter l'animation fadeIn
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes fadeIn {
+                    from { opacity: 0; }
+                    to { opacity: 1; }
+                }
+            `;
+            document.head.appendChild(style);
+        });
+    </script>
+</body>
+</html>

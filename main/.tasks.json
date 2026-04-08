@@ -1,0 +1,116 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-04-06T23:02:00.000Z",
+  "tasks": {
+    "todo": [
+      {
+        "id": "task-001",
+        "title": "Créer structure AGENTS.md complète",
+        "description": "Implémenter tous les fichiers manquants selon AGENTS.md: MEMORY-CORE.md, scripts/, WIP protocol, etc.",
+        "createdAt": "2026-04-06T23:02:00.000Z",
+        "priority": "high",
+        "estimatedHours": 2,
+        "dependencies": [],
+        "validationRequired": {
+          "louix": false,
+          "tester": false
+        }
+      },
+      {
+        "id": "task-002",
+        "title": "Configurer communication Discord",
+        "description": "Établir la connexion avec le canal #mission-control-and-setup et implémenter les updates obligatoires",
+        "createdAt": "2026-04-06T23:02:00.000Z",
+        "priority": "high",
+        "estimatedHours": 1,
+        "dependencies": ["task-001"],
+        "validationRequired": {
+          "louix": false,
+          "tester": true
+        }
+      },
+      {
+        "id": "task-003",
+        "title": "Créer scripts agents (Bob, Louix, Tester)",
+        "description": "Développer les scripts Node.js pour la supervision Bob et les validations post-BUILD",
+        "createdAt": "2026-04-06T23:02:00.000Z",
+        "priority": "medium",
+        "estimatedHours": 3,
+        "dependencies": ["task-001"],
+        "validationRequired": {
+          "louix": true,
+          "tester": true
+        }
+      }
+    ],
+    "doing": [
+      {
+        "id": "task-000",
+        "title": "Application initiale AGENTS.md",
+        "description": "Lecture et application des règles AGENTS.md, création des fichiers de base (BLUEPRINT.md, .tasks.json, etc.)",
+        "createdAt": "2026-04-06T22:59:00.000Z",
+        "startedAt": "2026-04-06T23:00:00.000Z",
+        "priority": "critical",
+        "estimatedHours": 0.5,
+        "dependencies": [],
+        "validationRequired": {
+          "louix": false,
+          "tester": false
+        },
+        "progress": 80,
+        "currentPhase": "BUILD",
+        "assignedTo": ["Magalie"],
+        "owner": "Jeremiah"
+      }
+    ],
+    "needs_input": [],
+    "canceled": [],
+    "done": []
+  },
+  "workInProgress": {
+    "status": "in-progress",
+    "taskId": "task-000",
+    "description": "Application initiale AGENTS.md",
+    "startedAt": "2026-04-06T23:00:00.000Z",
+    "nextStep": "Créer MEMORY-CORE.md et scripts/",
+    "validationRequired": {
+      "louix": false,
+      "tester": false
+    }
+  },
+  "agents": {
+    "Magalie": {
+      "status": "online",
+      "currentTask": "task-000",
+      "lastHeartbeat": "2026-04-06T23:02:00.000Z",
+      "role": "orchestrator"
+    },
+    "Bob": {
+      "status": "idle",
+      "currentTask": null,
+      "lastActivity": null,
+      "role": "builder"
+    },
+    "Louix": {
+      "status": "idle",
+      "currentTask": null,
+      "lastActivity": null,
+      "role": "ui_validator"
+    },
+    "Tester": {
+      "status": "idle",
+      "currentTask": null,
+      "lastActivity": null,
+      "role": "api_validator"
+    }
+  },
+  "settings": {
+    "discordChannelId": "1486054999476797553",
+    "dashboardUrl": "http://127.0.0.1:8790",
+    "apiUrl": "http://127.0.0.1:8789",
+    "maxBobRuntimeMinutes": 10,
+    "requiredValidationScore": 5,
+    "dailyBudget": 10,
+    "budgetAlertThreshold": 7.5
+  }
+}

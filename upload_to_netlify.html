@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload FitMaster Pro to Netlify</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #f8fafc;
+            min-height: 100vh;
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .logo-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+        }
+
+        .logo-text h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: linear-gradient(90deg, #6366f1, #8b5cf6, #10b981);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .logo-text .tagline {
+            font-size: 1.1rem;
+            color: #94a3b8;
+        }
+
+        .upload-section {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .upload-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #f8fafc;
+            margin-bottom: 20px;
+        }
+
+        .upload-description {
+            color: #94a3b8;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .upload-area {
+            border: 3px dashed rgba(99, 102, 241, 0.3);
+            border-radius: 15px;
+            padding: 60px 40px;
+            background: rgba(99, 102, 241, 0.05);
+            transition: all 0.3s;
+            cursor: pointer;
+            margin-bottom: 30px;
+        }
+
+        .upload-area:hover {
+            border-color: #6366f1;
+            background: rgba(99, 102, 241, 0.1);
+        }
+
+        .upload-area.dragover {
+            border-color: #10b981;
+            background: rgba(16, 185, 129, 0.1);
+        }
+
+        .upload-icon {
+            font-size: 48px;
+            color: #6366f1;
+            margin-bottom: 20px;
+        }
+
+        .upload-text {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #f8fafc;
+            margin-bottom: 10px;
+        }
+
+        .upload-subtext {
+            color: #94a3b8;
+            font-size: 0.95rem;
+        }
+
+        #fileInput {
+            display: none;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 32px;
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: #6366f1;
+        }
+
+        .download-btn {
+            margin-top: 20px;
+        }
+
+        .status {
+            margin-top: 30px;
+            padding: 20px;
+            border-radius: 12px;
+            display: none;
+        }
+
+        .status.success {
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            color: #6ee7b7;
+            display: block;
+        }
+
+        .status.error {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.2);
+            color: #fca5a5;
+            display: block;
+        }
+
+        .instructions {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 30px;
+            margin-top: 30px;
+        }
+
+        .instructions-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #f8fafc;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .step {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .step:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .step-number {
+            width: 35px;
+            height: 35px;
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            color: white;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .step-content h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #f8fafc;
+            margin-bottom: 5px;
+        }
+
+        .step-content p {
+            color: #94a3b8;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .qr-section {
+            text-align: center;
+            margin-top: 40px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 15px;
+        }
+
+        .qr-section h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: #f8fafc;
+        }
+
+        .qr-code {
+            width: 200px;
+            height: 200px;
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: #333;
+        }
+
+        @media (max-width: 768px) {
+            .logo {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .logo-text h1 {
+                font-size: 2rem;
+            }
+            
+            .upload-section {
+                padding: 25px 20px;
+            }
+            
+            .upload-area {
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>FitMaster Pro</h1>
+                    <p class="tagline">Déploiement instantané sur Netlify</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="upload-section">
+            <h2 class="upload-title">Déploie ton application en 30 secondes</h2>
+            <p class="upload-description">
+                Télécharge le fichier ZIP et dépose-le sur Netlify Drop. 
+                Ton application sera en ligne immédiatement, 100% gratuit.
+            </p>
+
+            <div class="upload-area" id="uploadArea">
+                <div class="upload-icon">
+                    <i class="fas fa-file-archive"></i>
+                </div>
+                <div class="upload-text">fitmaster-pro.zip</div>
+                <div class="upload-subtext">60 KB - Prêt à déployer</div>
+            </div>
+
+            <a href="fitmaster-pro.zip" download class="btn download-btn">
+                <i class="fas fa-download"></i>
+                Télécharger le fichier ZIP
+            </a>
+
+            <a href="https://app.netlify.com/drop" target="_blank" class="btn btn-secondary">
+                <i class="fas fa-external-link-alt"></i>
+                Ouvrir Netlify Drop
+            </a>
+
+            <div class="status" id="status"></div>
+        </div>
+
+        <div class="instructions">
+            <h2 class="instructions-title">
+                <i class="fas fa-graduation-cap"></i>
+                Instructions de déploiement
+            </h2>
+            
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Télécharge le fichier ZIP</h3>
+                    <p>Clique sur "Télécharger le fichier ZIP" ci-dessus pour obtenir l'application complète.</p>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Ouvre Netlify Drop</h3>
+                    <p>Clique sur "Ouvrir Netlify Drop" ou va sur <code>https://app.netlify.com/drop</code></p>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Drag & Drop</h3>
+                    <p>Glisse le fichier <code>fitmaster-pro.zip</code> dans la zone de dépôt sur Netlify.</p>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>Accède à ton application</h3>
+                    <p>Netlify te donnera une URL comme <code>https://ton-app.netlify.app</code></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="qr-section">
+            <h3>Scan pour ouvrir Netlify Drop</h3>
+            <div class="qr-code">
+                <div style="text-align: center;">
+                    <div style="font-size: 1.5rem; margin-bottom: 10px;">📱</div>
+                    <div style="font-size: 0.9rem; color: #666;">netlify.com/drop</div>
+                </div>
+            </div>
+            <p>Utilise ton téléphone pour scanner ce QR code et accéder directement à Netlify Drop.</p>
+        </div>
+    </div>
+
+    <script>
+        // Gestion du drag & drop
+        const uploadArea = document.getElementById('uploadArea');
+        const status = document.getElementById('status');
+
+        uploadArea.addEventListener('click', () => {
+            window.open('https://app.netlify.com/drop', '_blank');
+            status.className = 'status success';
+            status.innerHTML = '<i class="fas fa-check-circle"></i> Netlify Drop ouvert dans un nouvel onglet. Dépose le fichier ZIP !';
+        });
+
+        uploadArea.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            uploadArea.classList.add('dragover');
+        });
+
+        uploadArea.addEventListener('dragleave', () => {
+            uploadArea.classList.remove('dragover');
+        });
+
+        uploadArea.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadArea.classList.remove('dragover');
+            
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+                const file = files[0];
+                if (file.name === 'fitmaster-pro.zip' || file.name.endsWith('.zip')) {
+                    status.className = 'status success';
+                    status.innerHTML = `<i class="fas fa-check-circle"></i> Fichier "${file.name}" prêt à être uploadé sur Netlify Drop.`;
+                    window.open('https://app.netlify.com/drop', '_blank');
+                } else {
+                    status.className = 'status error';
+                    status.innerHTML = `<i class="fas fa-times-circle"></i> Veuillez utiliser le fichier "fitmaster-pro.zip"`;
+                }
+            }
+        });
+
+        // Afficher le statut initial
+        status.className = 'status success';
+        status.innerHTML = '<i class="fas fa-info-circle"></i> Prêt à déployer ! Télécharge le ZIP et dépose-le sur Netlify Drop.';
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+</body>
+</html>

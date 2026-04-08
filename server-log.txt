@@ -1,0 +1,978 @@
+
+> juriplateforme@0.1.0 dev
+> next dev -p 3001
+
+  ▲ Next.js 14.2.5
+  - Local:        http://localhost:3001
+  - Environments: .env.local, .env
+
+ ✓ Starting...
+ ✓ Ready in 988ms
+ ○ Compiling /landing ...
+ ⨯ ./app/landing/page.tsx:8:1
+Module not found: Can't resolve '@/components/ui/button'
+[0m [90m  6 |[39m   [33mLock[39m[33m,[39m [33mZap[39m[33m,[39m [33mHeart[39m[33m,[39m [33mStar[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mHelpCircle[39m [0m
+[0m [90m  7 |[39m } [36mfrom[39m [32m'lucide-react'[39m[0m
+[0m[31m[1m>[22m[39m[90m  8 |[39m [36mimport[39m { [33mButton[39m } [36mfrom[39m [32m'@/components/ui/button'[39m[0m
+[0m [90m    |[39m [31m[1m^[22m[39m[0m
+[0m [90m  9 |[39m[0m
+[0m [90m 10 |[39m [36mexport[39m [36mdefault[39m [36mfunction[39m [33mLandingPage[39m() {[0m
+[0m [90m 11 |[39m   [36mconst[39m features [33m=[39m [[0m
+
+https://nextjs.org/docs/messages/module-not-found
+ ⨯ ./app/landing/page.tsx:8:1
+Module not found: Can't resolve '@/components/ui/button'
+[0m [90m  6 |[39m   [33mLock[39m[33m,[39m [33mZap[39m[33m,[39m [33mHeart[39m[33m,[39m [33mStar[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mHelpCircle[39m [0m
+[0m [90m  7 |[39m } [36mfrom[39m [32m'lucide-react'[39m[0m
+[0m[31m[1m>[22m[39m[90m  8 |[39m [36mimport[39m { [33mButton[39m } [36mfrom[39m [32m'@/components/ui/button'[39m[0m
+[0m [90m    |[39m [31m[1m^[22m[39m[0m
+[0m [90m  9 |[39m[0m
+[0m [90m 10 |[39m [36mexport[39m [36mdefault[39m [36mfunction[39m [33mLandingPage[39m() {[0m
+[0m [90m 11 |[39m   [36mconst[39m features [33m=[39m [[0m
+
+https://nextjs.org/docs/messages/module-not-found
+ ⨯ ./app/landing/page.tsx:8:1
+Module not found: Can't resolve '@/components/ui/button'
+[0m [90m  6 |[39m   [33mLock[39m[33m,[39m [33mZap[39m[33m,[39m [33mHeart[39m[33m,[39m [33mStar[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mHelpCircle[39m [0m
+[0m [90m  7 |[39m } [36mfrom[39m [32m'lucide-react'[39m[0m
+[0m[31m[1m>[22m[39m[90m  8 |[39m [36mimport[39m { [33mButton[39m } [36mfrom[39m [32m'@/components/ui/button'[39m[0m
+[0m [90m    |[39m [31m[1m^[22m[39m[0m
+[0m [90m  9 |[39m[0m
+[0m [90m 10 |[39m [36mexport[39m [36mdefault[39m [36mfunction[39m [33mLandingPage[39m() {[0m
+[0m [90m 11 |[39m   [36mconst[39m features [33m=[39m [[0m
+
+https://nextjs.org/docs/messages/module-not-found
+ GET /landing 500 in 1751ms
+ GET /landing 500 in 19ms
+ GET /landing 500 in 14ms
+ GET /landing 500 in 10ms
+ ⨯ ./app/landing/page.tsx:8:1
+Module not found: Can't resolve '@/components/ui/button'
+[0m [90m  6 |[39m   [33mLock[39m[33m,[39m [33mZap[39m[33m,[39m [33mHeart[39m[33m,[39m [33mStar[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mHelpCircle[39m [0m
+[0m [90m  7 |[39m } [36mfrom[39m [32m'lucide-react'[39m[0m
+[0m[31m[1m>[22m[39m[90m  8 |[39m [36mimport[39m { [33mButton[39m } [36mfrom[39m [32m'@/components/ui/button'[39m[0m
+[0m [90m    |[39m [31m[1m^[22m[39m[0m
+[0m [90m  9 |[39m[0m
+[0m [90m 10 |[39m [36mexport[39m [36mdefault[39m [36mfunction[39m [33mLandingPage[39m() {[0m
+[0m [90m 11 |[39m   [36mconst[39m features [33m=[39m [[0m
+
+https://nextjs.org/docs/messages/module-not-found
+ GET / 500 in 135ms
+ ⨯ ./components/ui/button.tsx:2:1
+Module not found: Can't resolve 'class-variance-authority'
+[0m [90m 1 |[39m [36mimport[39m [33m*[39m [36mas[39m [33mReact[39m [36mfrom[39m [32m"react"[39m[0m
+[0m[31m[1m>[22m[39m[90m 2 |[39m [36mimport[39m { cva[33m,[39m type [33mVariantProps[39m } [36mfrom[39m [32m"class-variance-authority"[39m[0m
+[0m [90m   |[39m [31m[1m^[22m[39m[0m
+[0m [90m 3 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[0m
+[0m [90m 4 |[39m[0m
+[0m [90m 5 |[39m [36mconst[39m buttonVariants [33m=[39m cva([0m
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./app/landing/page.tsx
+ ⨯ Error: ENOENT: no such file or directory, open '/Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/middleware-manifest.json'
+    at Object.readFileSync (node:fs:436:20)
+    at defaultLoadImpl (node:internal/modules/cjs/loader:1167:17)
+    at loadSource (node:internal/modules/cjs/loader:1855:20)
+    at Module._extensions..json (node:internal/modules/cjs/loader:1978:31)
+    at Module.load (node:internal/modules/cjs/loader:1552:32)
+    at Module._load (node:internal/modules/cjs/loader:1354:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1575:12)
+    at mod.require (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:191:16)
+    at DevServer.getMiddlewareManifest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:933:26)
+    at DevServer.getEdgeFunctionsPages (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:949:31)
+    at NextNodeServer.handleCatchallRenderRequest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:238:49)
+    at async DevServer.handleRequestImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/base-server.js:816:17)
+    at async /Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:174:21)
+    at async handleRequest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:353:24)
+    at async requestHandlerImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:377:13)
+    at async Server.requestListener (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/middleware-manifest.json'
+}
+ GET / 500 in 31ms
+Error: ENOENT: no such file or directory, open '/Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/middleware-manifest.json'
+    at Object.readFileSync (node:fs:436:20)
+    at defaultLoadImpl (node:internal/modules/cjs/loader:1167:17)
+    at loadSource (node:internal/modules/cjs/loader:1855:20)
+    at Module._extensions..json (node:internal/modules/cjs/loader:1978:31)
+    at Module.load (node:internal/modules/cjs/loader:1552:32)
+    at Module._load (node:internal/modules/cjs/loader:1354:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1575:12)
+    at mod.require (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:191:16)
+    at DevServer.getMiddlewareManifest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:933:26)
+    at DevServer.getEdgeFunctionsPages (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:949:31)
+    at DevServer.renderErrorToResponseImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:908:22)
+    at async pipe.req.req (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/base-server.js:2063:30)
+    at async DevServer.pipeImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/base-server.js:920:25)
+    at async /Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:174:21)
+    at async handleRequest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:368:24)
+    at async requestHandlerImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:377:13)
+    at async Server.requestListener (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/middleware-manifest.json'
+}
+ GET /_next/static/chunks/fallback/webpack.js?ts=1775590639068 500 in 17ms
+ GET /_next/static/chunks/fallback/webpack.js?ts=1775590639068 500 in 13ms
+Error: ENOENT: no such file or directory, open '/Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/middleware-manifest.json'
+    at Object.readFileSync (node:fs:436:20)
+    at defaultLoadImpl (node:internal/modules/cjs/loader:1167:17)
+    at loadSource (node:internal/modules/cjs/loader:1855:20)
+    at Module._extensions..json (node:internal/modules/cjs/loader:1978:31)
+    at Module.load (node:internal/modules/cjs/loader:1552:32)
+    at Module._load (node:internal/modules/cjs/loader:1354:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1575:12)
+    at mod.require (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:191:16)
+    at DevServer.getMiddlewareManifest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:933:26)
+    at DevServer.getEdgeFunctionsPages (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:949:31)
+    at DevServer.renderErrorToResponseImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:908:22)
+    at async pipe.req.req (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/base-server.js:2063:30)
+    at async DevServer.pipeImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/base-server.js:920:25)
+    at async /Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:174:21)
+    at async handleRequest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:368:24)
+    at async requestHandlerImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:377:13)
+    at async Server.requestListener (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/middleware-manifest.json'
+}
+Error: ENOENT: no such file or directory, open '/Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/middleware-manifest.json'
+    at Object.readFileSync (node:fs:436:20)
+    at defaultLoadImpl (node:internal/modules/cjs/loader:1167:17)
+    at loadSource (node:internal/modules/cjs/loader:1855:20)
+    at Module._extensions..json (node:internal/modules/cjs/loader:1978:31)
+    at Module.load (node:internal/modules/cjs/loader:1552:32)
+    at Module._load (node:internal/modules/cjs/loader:1354:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1575:12)
+    at mod.require (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:191:16)
+    at DevServer.getMiddlewareManifest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:933:26)
+    at DevServer.getEdgeFunctionsPages (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:949:31)
+    at DevServer.renderErrorToResponseImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:908:22)
+    at async pipe.req.req (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/base-server.js:2063:30)
+    at async DevServer.pipeImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/base-server.js:920:25)
+    at async /Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:174:21)
+    at async handleRequest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:368:24)
+    at async requestHandlerImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:377:13)
+    at async Server.requestListener (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/middleware-manifest.json'
+}
+Error: ENOENT: no such file or directory, open '/Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/middleware-manifest.json'
+    at Object.readFileSync (node:fs:436:20)
+    at defaultLoadImpl (node:internal/modules/cjs/loader:1167:17)
+    at loadSource (node:internal/modules/cjs/loader:1855:20)
+    at Module._extensions..json (node:internal/modules/cjs/loader:1978:31)
+    at Module.load (node:internal/modules/cjs/loader:1552:32)
+    at Module._load (node:internal/modules/cjs/loader:1354:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1575:12)
+    at mod.require (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:191:16)
+    at DevServer.getMiddlewareManifest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:933:26)
+    at DevServer.getEdgeFunctionsPages (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:949:31)
+    at DevServer.renderErrorToResponseImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:908:22)
+    at async pipe.req.req (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/base-server.js:2063:30)
+    at async DevServer.pipeImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/base-server.js:920:25)
+    at async /Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:174:21)
+    at async handleRequest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:368:24)
+    at async requestHandlerImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:377:13)
+    at async Server.requestListener (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/middleware-manifest.json'
+}
+Error: ENOENT: no such file or directory, open '/Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/middleware-manifest.json'
+    at Object.readFileSync (node:fs:436:20)
+    at defaultLoadImpl (node:internal/modules/cjs/loader:1167:17)
+    at loadSource (node:internal/modules/cjs/loader:1855:20)
+    at Module._extensions..json (node:internal/modules/cjs/loader:1978:31)
+    at Module.load (node:internal/modules/cjs/loader:1552:32)
+    at Module._load (node:internal/modules/cjs/loader:1354:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1575:12)
+    at mod.require (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:191:16)
+    at DevServer.getMiddlewareManifest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:933:26)
+    at DevServer.getEdgeFunctionsPages (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:949:31)
+    at DevServer.renderErrorToResponseImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:908:22)
+    at async pipe.req.req (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/base-server.js:2063:30)
+    at async DevServer.pipeImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/base-server.js:920:25)
+    at async /Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:174:21)
+    at async handleRequest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:368:24)
+    at async requestHandlerImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:377:13)
+    at async Server.requestListener (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/middleware-manifest.json'
+}
+ GET /_next/static/chunks/fallback/main.js?ts=1775590639068 500 in 20ms
+ GET /_next/static/chunks/fallback/main.js?ts=1775590639068 500 in 12ms
+ GET /_next/static/chunks/fallback/pages/_app.js?ts=1775590639068 500 in 18ms
+ GET /_next/static/chunks/fallback/pages/_app.js?ts=1775590639068 500 in 12ms
+ GET /_next/static/chunks/fallback/pages/_error.js?ts=1775590639068 500 in 16ms
+ GET /_next/static/chunks/fallback/pages/_error.js?ts=1775590639068 500 in 12ms
+ GET /_next/static/chunks/fallback/react-refresh.js?ts=1775590639068 500 in 15ms
+ GET /_next/static/chunks/fallback/react-refresh.js?ts=1775590639068 500 in 12ms
+ ⨯ Error: ENOENT: no such file or directory, open '/Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/middleware-manifest.json'
+    at Object.readFileSync (node:fs:436:20)
+    at defaultLoadImpl (node:internal/modules/cjs/loader:1167:17)
+    at loadSource (node:internal/modules/cjs/loader:1855:20)
+    at Module._extensions..json (node:internal/modules/cjs/loader:1978:31)
+    at Module.load (node:internal/modules/cjs/loader:1552:32)
+    at Module._load (node:internal/modules/cjs/loader:1354:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1575:12)
+    at mod.require (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:191:16)
+    at DevServer.getMiddlewareManifest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:933:26)
+    at DevServer.getEdgeFunctionsPages (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:949:31)
+    at NextNodeServer.handleCatchallRenderRequest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:238:49)
+    at async DevServer.handleRequestImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/base-server.js:816:17)
+    at async /Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:174:21)
+    at async handleRequest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:353:24)
+    at async requestHandlerImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:377:13)
+    at async Server.requestListener (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/middleware-manifest.json'
+}
+ GET / 500 in 13ms
+Error: ENOENT: no such file or directory, open '/Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/middleware-manifest.json'
+    at Object.readFileSync (node:fs:436:20)
+    at defaultLoadImpl (node:internal/modules/cjs/loader:1167:17)
+    at loadSource (node:internal/modules/cjs/loader:1855:20)
+    at Module._extensions..json (node:internal/modules/cjs/loader:1978:31)
+    at Module.load (node:internal/modules/cjs/loader:1552:32)
+    at Module._load (node:internal/modules/cjs/loader:1354:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1575:12)
+    at mod.require (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:191:16)
+    at DevServer.getMiddlewareManifest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:933:26)
+    at DevServer.getEdgeFunctionsPages (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:949:31)
+    at DevServer.renderErrorToResponseImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:908:22)
+    at async pipe.req.req (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/base-server.js:2063:30)
+    at async DevServer.pipeImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/base-server.js:920:25)
+    at async /Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:174:21)
+    at async handleRequest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:368:24)
+    at async requestHandlerImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:377:13)
+    at async Server.requestListener (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/middleware-manifest.json'
+}
+Error: ENOENT: no such file or directory, open '/Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/middleware-manifest.json'
+    at Object.readFileSync (node:fs:436:20)
+    at defaultLoadImpl (node:internal/modules/cjs/loader:1167:17)
+    at loadSource (node:internal/modules/cjs/loader:1855:20)
+    at Module._extensions..json (node:internal/modules/cjs/loader:1978:31)
+    at Module.load (node:internal/modules/cjs/loader:1552:32)
+    at Module._load (node:internal/modules/cjs/loader:1354:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1575:12)
+    at mod.require (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:191:16)
+    at DevServer.getMiddlewareManifest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:933:26)
+    at DevServer.getEdgeFunctionsPages (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:949:31)
+    at DevServer.renderErrorToResponseImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:908:22)
+    at async pipe.req.req (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/base-server.js:2063:30)
+    at async DevServer.pipeImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/base-server.js:920:25)
+    at async /Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:174:21)
+    at async handleRequest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:368:24)
+    at async requestHandlerImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:377:13)
+    at async Server.requestListener (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/middleware-manifest.json'
+}
+Error: ENOENT: no such file or directory, open '/Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/middleware-manifest.json'
+    at Object.readFileSync (node:fs:436:20)
+    at defaultLoadImpl (node:internal/modules/cjs/loader:1167:17)
+    at loadSource (node:internal/modules/cjs/loader:1855:20)
+    at Module._extensions..json (node:internal/modules/cjs/loader:1978:31)
+    at Module.load (node:internal/modules/cjs/loader:1552:32)
+    at Module._load (node:internal/modules/cjs/loader:1354:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1575:12)
+    at mod.require (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:191:16)
+    at DevServer.getMiddlewareManifest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:933:26)
+    at DevServer.getEdgeFunctionsPages (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:949:31)
+    at DevServer.renderErrorToResponseImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:908:22)
+    at async pipe.req.req (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/base-server.js:2063:30)
+    at async DevServer.pipeImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/base-server.js:920:25)
+    at async /Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:174:21)
+    at async handleRequest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:368:24)
+    at async requestHandlerImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:377:13)
+    at async Server.requestListener (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/middleware-manifest.json'
+}
+Error: ENOENT: no such file or directory, open '/Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/middleware-manifest.json'
+    at Object.readFileSync (node:fs:436:20)
+    at defaultLoadImpl (node:internal/modules/cjs/loader:1167:17)
+    at loadSource (node:internal/modules/cjs/loader:1855:20)
+    at Module._extensions..json (node:internal/modules/cjs/loader:1978:31)
+    at Module.load (node:internal/modules/cjs/loader:1552:32)
+    at Module._load (node:internal/modules/cjs/loader:1354:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1575:12)
+    at mod.require (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:191:16)
+    at DevServer.getMiddlewareManifest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:933:26)
+    at DevServer.getEdgeFunctionsPages (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:949:31)
+    at DevServer.renderErrorToResponseImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:908:22)
+    at async pipe.req.req (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/base-server.js:2063:30)
+    at async DevServer.pipeImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/base-server.js:920:25)
+    at async /Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:174:21)
+    at async handleRequest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:368:24)
+    at async requestHandlerImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:377:13)
+    at async Server.requestListener (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/middleware-manifest.json'
+}
+ GET /_next/static/chunks/fallback/webpack.js?ts=1775590642589 500 in 14ms
+ GET /_next/static/chunks/fallback/webpack.js?ts=1775590642589 500 in 11ms
+ GET /_next/static/chunks/fallback/main.js?ts=1775590642589 500 in 13ms
+ GET /_next/static/chunks/fallback/main.js?ts=1775590642589 500 in 11ms
+Error: ENOENT: no such file or directory, open '/Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/middleware-manifest.json'
+    at Object.readFileSync (node:fs:436:20)
+    at defaultLoadImpl (node:internal/modules/cjs/loader:1167:17)
+    at loadSource (node:internal/modules/cjs/loader:1855:20)
+    at Module._extensions..json (node:internal/modules/cjs/loader:1978:31)
+    at Module.load (node:internal/modules/cjs/loader:1552:32)
+    at Module._load (node:internal/modules/cjs/loader:1354:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1575:12)
+    at mod.require (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:191:16)
+    at DevServer.getMiddlewareManifest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:933:26)
+    at DevServer.getEdgeFunctionsPages (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:949:31)
+    at DevServer.renderErrorToResponseImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:908:22)
+    at async pipe.req.req (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/base-server.js:2063:30)
+    at async DevServer.pipeImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/base-server.js:920:25)
+    at async /Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:174:21)
+    at async handleRequest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:368:24)
+    at async requestHandlerImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:377:13)
+    at async Server.requestListener (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/middleware-manifest.json'
+}
+ GET /_next/static/chunks/fallback/pages/_app.js?ts=1775590642589 500 in 17ms
+ GET /_next/static/chunks/fallback/pages/_app.js?ts=1775590642589 500 in 10ms
+ GET /_next/static/chunks/fallback/pages/_error.js?ts=1775590642589 500 in 17ms
+ GET /_next/static/chunks/fallback/pages/_error.js?ts=1775590642589 500 in 11ms
+ GET /_next/static/chunks/fallback/react-refresh.js?ts=1775590642589 500 in 12ms
+ GET /_next/static/chunks/fallback/react-refresh.js?ts=1775590642589 500 in 5ms
+ ⨯ Error: ENOENT: no such file or directory, open '/Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/middleware-manifest.json'
+    at Object.readFileSync (node:fs:436:20)
+    at defaultLoadImpl (node:internal/modules/cjs/loader:1167:17)
+    at loadSource (node:internal/modules/cjs/loader:1855:20)
+    at Module._extensions..json (node:internal/modules/cjs/loader:1978:31)
+    at Module.load (node:internal/modules/cjs/loader:1552:32)
+    at Module._load (node:internal/modules/cjs/loader:1354:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1575:12)
+    at mod.require (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:191:16)
+    at DevServer.getMiddlewareManifest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:933:26)
+    at DevServer.getEdgeFunctionsPages (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:949:31)
+    at NextNodeServer.handleCatchallRenderRequest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:238:49)
+    at async DevServer.handleRequestImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/base-server.js:816:17)
+    at async /Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:174:21)
+    at async handleRequest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:353:24)
+    at async requestHandlerImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:377:13)
+    at async Server.requestListener (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/middleware-manifest.json'
+}
+ GET / 500 in 12ms
+Error: ENOENT: no such file or directory, open '/Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/middleware-manifest.json'
+    at Object.readFileSync (node:fs:436:20)
+    at defaultLoadImpl (node:internal/modules/cjs/loader:1167:17)
+    at loadSource (node:internal/modules/cjs/loader:1855:20)
+    at Module._extensions..json (node:internal/modules/cjs/loader:1978:31)
+    at Module.load (node:internal/modules/cjs/loader:1552:32)
+    at Module._load (node:internal/modules/cjs/loader:1354:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1575:12)
+    at mod.require (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:191:16)
+    at DevServer.getMiddlewareManifest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:933:26)
+    at DevServer.getEdgeFunctionsPages (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:949:31)
+    at DevServer.renderErrorToResponseImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:908:22)
+    at async pipe.req.req (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/base-server.js:2063:30)
+    at async DevServer.pipeImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/base-server.js:920:25)
+    at async /Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:174:21)
+    at async handleRequest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:368:24)
+    at async requestHandlerImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:377:13)
+    at async Server.requestListener (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/middleware-manifest.json'
+}
+ GET /_next/static/chunks/fallback/webpack.js?ts=1775590819551 500 in 10ms
+ GET /_next/static/chunks/fallback/webpack.js?ts=1775590819551 500 in 7ms
+Error: ENOENT: no such file or directory, open '/Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/middleware-manifest.json'
+    at Object.readFileSync (node:fs:436:20)
+    at defaultLoadImpl (node:internal/modules/cjs/loader:1167:17)
+    at loadSource (node:internal/modules/cjs/loader:1855:20)
+    at Module._extensions..json (node:internal/modules/cjs/loader:1978:31)
+    at Module.load (node:internal/modules/cjs/loader:1552:32)
+    at Module._load (node:internal/modules/cjs/loader:1354:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1575:12)
+    at mod.require (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:191:16)
+    at DevServer.getMiddlewareManifest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:933:26)
+    at DevServer.getEdgeFunctionsPages (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:949:31)
+    at DevServer.renderErrorToResponseImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:908:22)
+    at async pipe.req.req (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/base-server.js:2063:30)
+    at async DevServer.pipeImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/base-server.js:920:25)
+    at async /Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:174:21)
+    at async handleRequest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:368:24)
+    at async requestHandlerImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:377:13)
+    at async Server.requestListener (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/middleware-manifest.json'
+}
+Error: ENOENT: no such file or directory, open '/Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/middleware-manifest.json'
+    at Object.readFileSync (node:fs:436:20)
+    at defaultLoadImpl (node:internal/modules/cjs/loader:1167:17)
+    at loadSource (node:internal/modules/cjs/loader:1855:20)
+    at Module._extensions..json (node:internal/modules/cjs/loader:1978:31)
+    at Module.load (node:internal/modules/cjs/loader:1552:32)
+    at Module._load (node:internal/modules/cjs/loader:1354:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1575:12)
+    at mod.require (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:191:16)
+    at DevServer.getMiddlewareManifest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:933:26)
+    at DevServer.getEdgeFunctionsPages (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:949:31)
+    at DevServer.renderErrorToResponseImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:908:22)
+    at async pipe.req.req (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/base-server.js:2063:30)
+    at async DevServer.pipeImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/base-server.js:920:25)
+    at async /Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:174:21)
+    at async handleRequest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:368:24)
+    at async requestHandlerImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:377:13)
+    at async Server.requestListener (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/middleware-manifest.json'
+}
+Error: ENOENT: no such file or directory, open '/Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/middleware-manifest.json'
+    at Object.readFileSync (node:fs:436:20)
+    at defaultLoadImpl (node:internal/modules/cjs/loader:1167:17)
+    at loadSource (node:internal/modules/cjs/loader:1855:20)
+    at Module._extensions..json (node:internal/modules/cjs/loader:1978:31)
+    at Module.load (node:internal/modules/cjs/loader:1552:32)
+    at Module._load (node:internal/modules/cjs/loader:1354:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1575:12)
+    at mod.require (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:191:16)
+    at DevServer.getMiddlewareManifest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:933:26)
+    at DevServer.getEdgeFunctionsPages (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:949:31)
+    at DevServer.renderErrorToResponseImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:908:22)
+    at async pipe.req.req (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/base-server.js:2063:30)
+    at async DevServer.pipeImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/base-server.js:920:25)
+    at async /Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:174:21)
+    at async handleRequest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:368:24)
+    at async requestHandlerImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:377:13)
+    at async Server.requestListener (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/middleware-manifest.json'
+}
+Error: ENOENT: no such file or directory, open '/Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/middleware-manifest.json'
+    at Object.readFileSync (node:fs:436:20)
+    at defaultLoadImpl (node:internal/modules/cjs/loader:1167:17)
+    at loadSource (node:internal/modules/cjs/loader:1855:20)
+    at Module._extensions..json (node:internal/modules/cjs/loader:1978:31)
+    at Module.load (node:internal/modules/cjs/loader:1552:32)
+    at Module._load (node:internal/modules/cjs/loader:1354:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1575:12)
+    at mod.require (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:191:16)
+    at DevServer.getMiddlewareManifest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:933:26)
+    at DevServer.getEdgeFunctionsPages (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:949:31)
+    at DevServer.renderErrorToResponseImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:908:22)
+    at async pipe.req.req (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/base-server.js:2063:30)
+    at async DevServer.pipeImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/base-server.js:920:25)
+    at async /Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:174:21)
+    at async handleRequest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:368:24)
+    at async requestHandlerImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:377:13)
+    at async Server.requestListener (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/middleware-manifest.json'
+}
+ GET /_next/static/chunks/fallback/main.js?ts=1775590819551 500 in 12ms
+ GET /_next/static/chunks/fallback/main.js?ts=1775590819551 500 in 9ms
+ GET /_next/static/chunks/fallback/pages/_app.js?ts=1775590819551 500 in 12ms
+ GET /_next/static/chunks/fallback/pages/_app.js?ts=1775590819551 500 in 9ms
+ GET /_next/static/chunks/fallback/pages/_error.js?ts=1775590819551 500 in 10ms
+ GET /_next/static/chunks/fallback/pages/_error.js?ts=1775590819551 500 in 9ms
+ GET /_next/static/chunks/fallback/react-refresh.js?ts=1775590819551 500 in 10ms
+ GET /_next/static/chunks/fallback/react-refresh.js?ts=1775590819551 500 in 9ms
+ ⨯ Error: ENOENT: no such file or directory, open '/Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/middleware-manifest.json'
+    at Object.readFileSync (node:fs:436:20)
+    at defaultLoadImpl (node:internal/modules/cjs/loader:1167:17)
+    at loadSource (node:internal/modules/cjs/loader:1855:20)
+    at Module._extensions..json (node:internal/modules/cjs/loader:1978:31)
+    at Module.load (node:internal/modules/cjs/loader:1552:32)
+    at Module._load (node:internal/modules/cjs/loader:1354:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1575:12)
+    at mod.require (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:191:16)
+    at DevServer.getMiddlewareManifest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:933:26)
+    at DevServer.getEdgeFunctionsPages (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:949:31)
+    at NextNodeServer.handleCatchallRenderRequest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:238:49)
+    at async DevServer.handleRequestImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/base-server.js:816:17)
+    at async /Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:174:21)
+    at async handleRequest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:353:24)
+    at async requestHandlerImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:377:13)
+    at async Server.requestListener (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/middleware-manifest.json'
+}
+ GET / 500 in 10ms
+Error: ENOENT: no such file or directory, open '/Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/middleware-manifest.json'
+    at Object.readFileSync (node:fs:436:20)
+    at defaultLoadImpl (node:internal/modules/cjs/loader:1167:17)
+    at loadSource (node:internal/modules/cjs/loader:1855:20)
+    at Module._extensions..json (node:internal/modules/cjs/loader:1978:31)
+    at Module.load (node:internal/modules/cjs/loader:1552:32)
+    at Module._load (node:internal/modules/cjs/loader:1354:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1575:12)
+    at mod.require (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:191:16)
+    at DevServer.getMiddlewareManifest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:933:26)
+    at DevServer.getEdgeFunctionsPages (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:949:31)
+    at DevServer.renderErrorToResponseImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:908:22)
+    at async pipe.req.req (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/base-server.js:2063:30)
+    at async DevServer.pipeImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/base-server.js:920:25)
+    at async /Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:174:21)
+    at async handleRequest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:368:24)
+    at async requestHandlerImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:377:13)
+    at async Server.requestListener (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/middleware-manifest.json'
+}
+Error: ENOENT: no such file or directory, open '/Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/middleware-manifest.json'
+    at Object.readFileSync (node:fs:436:20)
+    at defaultLoadImpl (node:internal/modules/cjs/loader:1167:17)
+    at loadSource (node:internal/modules/cjs/loader:1855:20)
+    at Module._extensions..json (node:internal/modules/cjs/loader:1978:31)
+    at Module.load (node:internal/modules/cjs/loader:1552:32)
+    at Module._load (node:internal/modules/cjs/loader:1354:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1575:12)
+    at mod.require (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:191:16)
+    at DevServer.getMiddlewareManifest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:933:26)
+    at DevServer.getEdgeFunctionsPages (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:949:31)
+    at DevServer.renderErrorToResponseImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:908:22)
+    at async pipe.req.req (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/base-server.js:2063:30)
+    at async DevServer.pipeImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/base-server.js:920:25)
+    at async /Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:174:21)
+    at async handleRequest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:368:24)
+    at async requestHandlerImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:377:13)
+    at async Server.requestListener (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/middleware-manifest.json'
+}
+Error: ENOENT: no such file or directory, open '/Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/middleware-manifest.json'
+    at Object.readFileSync (node:fs:436:20)
+    at defaultLoadImpl (node:internal/modules/cjs/loader:1167:17)
+    at loadSource (node:internal/modules/cjs/loader:1855:20)
+    at Module._extensions..json (node:internal/modules/cjs/loader:1978:31)
+    at Module.load (node:internal/modules/cjs/loader:1552:32)
+    at Module._load (node:internal/modules/cjs/loader:1354:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1575:12)
+    at mod.require (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:191:16)
+    at DevServer.getMiddlewareManifest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:933:26)
+    at DevServer.getEdgeFunctionsPages (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:949:31)
+    at DevServer.renderErrorToResponseImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:908:22)
+    at async pipe.req.req (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/base-server.js:2063:30)
+    at async DevServer.pipeImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/base-server.js:920:25)
+    at async /Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:174:21)
+    at async handleRequest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:368:24)
+    at async requestHandlerImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:377:13)
+    at async Server.requestListener (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/middleware-manifest.json'
+}
+Error: ENOENT: no such file or directory, open '/Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/middleware-manifest.json'
+    at Object.readFileSync (node:fs:436:20)
+    at defaultLoadImpl (node:internal/modules/cjs/loader:1167:17)
+    at loadSource (node:internal/modules/cjs/loader:1855:20)
+    at Module._extensions..json (node:internal/modules/cjs/loader:1978:31)
+    at Module.load (node:internal/modules/cjs/loader:1552:32)
+    at Module._load (node:internal/modules/cjs/loader:1354:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1575:12)
+    at mod.require (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:191:16)
+    at DevServer.getMiddlewareManifest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:933:26)
+    at DevServer.getEdgeFunctionsPages (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:949:31)
+    at DevServer.renderErrorToResponseImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:908:22)
+    at async pipe.req.req (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/base-server.js:2063:30)
+    at async DevServer.pipeImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/base-server.js:920:25)
+    at async /Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:174:21)
+    at async handleRequest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:368:24)
+    at async requestHandlerImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:377:13)
+    at async Server.requestListener (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/middleware-manifest.json'
+}
+ GET /_next/static/chunks/fallback/webpack.js?ts=1775590821571 500 in 14ms
+ GET /_next/static/chunks/fallback/webpack.js?ts=1775590821571 500 in 9ms
+ GET /_next/static/chunks/fallback/main.js?ts=1775590821571 500 in 12ms
+ GET /_next/static/chunks/fallback/main.js?ts=1775590821571 500 in 10ms
+Error: ENOENT: no such file or directory, open '/Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/middleware-manifest.json'
+    at Object.readFileSync (node:fs:436:20)
+    at defaultLoadImpl (node:internal/modules/cjs/loader:1167:17)
+    at loadSource (node:internal/modules/cjs/loader:1855:20)
+    at Module._extensions..json (node:internal/modules/cjs/loader:1978:31)
+    at Module.load (node:internal/modules/cjs/loader:1552:32)
+    at Module._load (node:internal/modules/cjs/loader:1354:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1575:12)
+    at mod.require (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:191:16)
+    at DevServer.getMiddlewareManifest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:933:26)
+    at DevServer.getEdgeFunctionsPages (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:949:31)
+    at DevServer.renderErrorToResponseImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:908:22)
+    at async pipe.req.req (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/base-server.js:2063:30)
+    at async DevServer.pipeImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/base-server.js:920:25)
+    at async /Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:174:21)
+    at async handleRequest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:368:24)
+    at async requestHandlerImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:377:13)
+    at async Server.requestListener (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/middleware-manifest.json'
+}
+ GET /_next/static/chunks/fallback/pages/_app.js?ts=1775590821571 500 in 14ms
+ GET /_next/static/chunks/fallback/pages/_app.js?ts=1775590821571 500 in 7ms
+ GET /_next/static/chunks/fallback/pages/_error.js?ts=1775590821571 500 in 8ms
+ GET /_next/static/chunks/fallback/pages/_error.js?ts=1775590821571 500 in 7ms
+ GET /_next/static/chunks/fallback/react-refresh.js?ts=1775590821571 500 in 9ms
+ GET /_next/static/chunks/fallback/react-refresh.js?ts=1775590821571 500 in 4ms
+ ✓ Compiled / in 134ms (491 modules)
+ ✓ Compiled / in 100ms (298 modules)
+ ⨯ TypeError: __webpack_modules__[moduleId] is not a function
+    at Object.__webpack_require__ [as require] (/Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/webpack-runtime.js:33:42)
+    at JSON.parse (<anonymous>)
+digest: "3642784056"
+TypeError: __webpack_modules__[moduleId] is not a function
+    at Object.__webpack_require__ [as require] (/Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/webpack-runtime.js:33:42)
+    at require (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:39:19729)
+    at /Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:108279
+    at eo (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:108464)
+    at /Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:110693
+    at Object._fromJSON (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:111249)
+    at JSON.parse (<anonymous>)
+    at eu (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:108958)
+    at en (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:108026)
+    at /Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:115168
+    at /Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:115185
+    at /Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:115218
+    at /Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:115235
+    at t (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:115458)
+ ⨯ TypeError: __webpack_modules__[moduleId] is not a function
+    at Object.__webpack_require__ [as require] (/Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/webpack-runtime.js:33:42)
+    at require (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:39:19729)
+    at /Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:108279
+    at eo (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:108464)
+    at /Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:110693
+    at Object._fromJSON (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:111249)
+    at JSON.parse (<anonymous>)
+    at eu (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:108958)
+    at en (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:108026)
+    at /Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:115168
+    at /Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:115185
+    at /Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:115218
+    at /Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:115235
+    at t (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:115458) {
+  page: '/'
+}
+ ⨯ Error: Cannot find module './682.js'
+Require stack:
+- /Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/webpack-runtime.js
+- /Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/app/page.js
+- /Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/require.js
+- /Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/load-components.js
+- /Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/build/utils.js
+- /Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/dev/hot-middleware.js
+- /Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js
+- /Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/start-server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1475:15)
+    at /Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/require-hook.js:55:36
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1048:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1072:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1093:12)
+    at Module._load (node:internal/modules/cjs/loader:1261:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1575:12)
+    at mod.require (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:191:16)
+    at __webpack_require__.f.require (/Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/webpack-runtime.js:198:28)
+    at /Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/webpack-runtime.js:111:40
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (/Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (/Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/webpack-runtime.js:162:22)
+    at /Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/pages/_document.js:1:335
+    at Object.<anonymous> (/Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/pages/_document.js:1:376)
+    at Module._compile (node:internal/modules/cjs/loader:1829:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1969:10)
+    at Module.load (node:internal/modules/cjs/loader:1552:32)
+    at Module._load (node:internal/modules/cjs/loader:1354:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1575:12)
+    at mod.require (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:191:16)
+    at requirePage (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/require.js:109:84)
+    at /Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/load-components.js:72:65
+    at async Promise.all (index 0)
+    at async loadComponentsImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/load-components.js:71:33)
+    at async DevServer.findPageComponentsImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:710:36) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/webpack-runtime.js',
+    '/Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/app/page.js',
+    '/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/require.js',
+    '/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/load-components.js',
+    '/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/build/utils.js',
+    '/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/dev/hot-middleware.js',
+    '/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/dev/hot-reloader-webpack.js',
+    '/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js',
+    '/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js',
+    '/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/start-server.js'
+  ]
+}
+TypeError: __webpack_modules__[moduleId] is not a function
+    at Object.__webpack_require__ [as require] (/Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/webpack-runtime.js:33:42)
+    at require (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:39:19729)
+    at /Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:108279
+    at eo (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:108464)
+    at /Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:110693
+    at Object._fromJSON (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:111249)
+    at JSON.parse (<anonymous>)
+    at eu (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:108958)
+    at en (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:108026)
+    at /Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:115168
+    at /Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:115185
+    at /Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:115218
+    at /Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:115235
+    at t (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:115458) {
+  page: '/'
+}
+ ⨯ Error: Cannot find module './682.js'
+Require stack:
+- /Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/webpack-runtime.js
+- /Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/app/page.js
+- /Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/require.js
+- /Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/load-components.js
+- /Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/build/utils.js
+- /Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/dev/hot-middleware.js
+- /Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js
+- /Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/start-server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1475:15)
+    at /Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/require-hook.js:55:36
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1048:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1072:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1093:12)
+    at Module._load (node:internal/modules/cjs/loader:1261:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1575:12)
+    at mod.require (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:191:16)
+    at __webpack_require__.f.require (/Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/webpack-runtime.js:198:28)
+    at /Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/webpack-runtime.js:111:40
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (/Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (/Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/webpack-runtime.js:162:22)
+    at /Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/pages/_document.js:1:335
+    at Object.<anonymous> (/Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/pages/_document.js:1:376)
+    at Module._compile (node:internal/modules/cjs/loader:1829:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1969:10)
+    at Module.load (node:internal/modules/cjs/loader:1552:32)
+    at Module._load (node:internal/modules/cjs/loader:1354:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1575:12)
+    at mod.require (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:191:16)
+    at requirePage (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/require.js:109:84)
+    at /Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/load-components.js:72:65
+    at async Promise.all (index 0)
+    at async loadComponentsImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/load-components.js:71:33)
+    at async DevServer.findPageComponentsImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/next-server.js:710:36) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/webpack-runtime.js',
+    '/Users/house/.openclaw/workspace-main/magalie-v3.1/.next/server/app/page.js',
+    '/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/require.js',
+    '/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/load-components.js',
+    '/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/build/utils.js',
+    '/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/dev/hot-middleware.js',
+    '/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/dev/hot-reloader-webpack.js',
+    '/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js',
+    '/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js',
+    '/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/start-server.js'
+  ]
+}
+Error: ENOENT: no such file or directory, open '/Users/house/.openclaw/workspace-main/magalie-v3.1/.next/fallback-build-manifest.json'
+    at readFileSync (node:fs:436:20)
+    at loadManifest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/load-manifest.js:35:54)
+    at loadManifestWithRetries (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/load-components.js:40:51)
+    at async loadDefaultErrorComponentsImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/load-default-error-components.js:30:24)
+    at async DevServer.getFallbackErrorComponents (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/dev/next-dev-server.js:594:16)
+    at async DevServer.renderErrorToResponseImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/base-server.js:2210:40)
+    at async pipe.req.req (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/base-server.js:2063:30)
+    at async DevServer.pipeImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/base-server.js:920:25)
+    at async /Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:174:21)
+    at async requestHandlerImpl (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/router-server.js:389:24)
+    at async Server.requestListener (/Users/house/.openclaw/workspace-main/magalie-v3.1/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/house/.openclaw/workspace-main/magalie-v3.1/.next/fallback-build-manifest.json'
+}
+ GET / 500 in 565ms
+ GET / 500 in 209ms
+ ✓ Compiled in 88ms (740 modules)
+[?25h

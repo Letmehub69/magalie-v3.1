@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Timer - Application d'entraînement</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #fff;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .header-left {
+            text-align: left;
+        }
+
+        .header-right {
+            text-align: right;
+        }
+
+        .current-date {
+            font-size: 1.2rem;
+            color: #00dbde;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .weight-input-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .weight-input {
+            padding: 8px 12px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 6px;
+            color: white;
+            font-size: 1rem;
+            width: 100px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #00dbde, #fc00ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            color: #a0a0c0;
+            font-size: 1.1rem;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .pagination {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .page-btn {
+            padding: 10px 15px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+            min-width: 40px;
+            text-align: center;
+        }
+
+        .page-btn:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: #00dbde;
+        }
+
+        .page-btn.active {
+            background: linear-gradient(135deg, #00dbde 0%, #0083b0 100%);
+            border-color: #00dbde;
+        }
+
+        .page-info {
+            color: #a0a0c0;
+            font-size: 0.9rem;
+            margin: 0 10px;
+        }
+
+        .control-btn {
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .control-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .control-btn:active {
+            transform: translateY(0);
+        }
+
+        .control-btn.reset {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        .control-btn.save {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+
+        .workout-table {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .table-header {
+            display: grid;
+            grid-template-columns: 80px 1fr 120px 120px 250px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px 20px;
+            font-weight: 600;
+            color: #00dbde;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .table-row {
+            display: grid;
+            grid-template-columns: 80px 1fr 120px 120px 250px;
+            padding: 15px 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            transition: background 0.3s;
+        }
+
+        .table-row:hover {
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .table-row.active {
+            background: rgba(0, 219, 222, 0.1);
+            border-left: 4px solid #00dbde;
+        }
+
+        .row-number {
+            font-weight: 600;
+            color: #a0a0c0;
+            display: flex;
+            align-items: center;
+        }
+
+        .exercise-input {
+            width: 100%;
+            padding: 10px 15px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 6px;
+            color: white;
+            font-size: 1rem;
+            transition: border 0.3s;
+        }
+
+        .exercise-input:focus {
+            outline: none;
+            border-color: #00dbde;
+            box-shadow: 0 0 0 2px rgba(0, 219, 222, 0.2);
+        }
+
+        .reps-input {
+            width: 100%;
+            padding: 10px 15px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 6px;
+            color: white;
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        .timer-controls {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: nowrap;
+            min-width: 250px;
+        }
+
+        .timer-display {
+            font-family: 'Courier New', monospace;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #00dbde;
+            min-width: 80px;
+            text-align: center;
+            padding: 5px 10px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 4px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .time-select {
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 6px;
+            color: white;
+            font-size: 1rem;
+            min-width: 80px;
+        }
+
+        .time-select option {
+            background: #1a1a2e;
+            color: white;
+        }
+
+        .timer-btn {
+            padding: 10px 20px;
+            background: linear-gradient(135deg, #00dbde 0%, #0083b0 100%);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+            white-space: nowrap;
+        }
+
+        .timer-btn:hover {
+            background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
+        }
+
+        .timer-btn:disabled {
+            background: #666;
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
+
+        .timer-display {
+            font-family: 'Courier New', monospace;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #00dbde;
+            min-width: 60px;
+            text-align: center;
+        }
+
+        .timer-display.active {
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 15px 25px;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transform: translateX(150%);
+            transition: transform 0.3s;
+            z-index: 1000;
+        }
+
+        .notification.show {
+            transform: translateX(0);
+        }
+
+        .sound-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            color: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: background 0.3s;
+        }
+
+        .sound-toggle:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .sound-toggle.active {
+            background: rgba(0, 219, 222, 0.2);
+            border-color: #00dbde;
+        }
+
+        .instructions {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            border-left: 4px solid #00dbde;
+        }
+
+        .instructions h3 {
+            color: #00dbde;
+            margin-bottom: 10px;
+        }
+
+        .instructions ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .instructions li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .instructions li:before {
+            content: "▶";
+            position: absolute;
+            left: 0;
+            color: #00dbde;
+        }
+
+        @media (max-width: 768px) {
+            .table-header,
+            .table-row {
+                grid-template-columns: 60px 1fr 120px 1fr;
+                padding: 10px;
+            }
+            
+            .timer-controls {
+                flex-direction: column;
+                gap: 5px;
+            }
+            
+            .control-btn {
+                padding: 10px 15px;
+                font-size: 0.9rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-left">
+                <h1>⏱️ Workout Timer</h1>
+                <p class="subtitle">Application d'entraînement avec timer intelligent</p>
+            </div>
+            <div class="header-right">
+                <div class="current-date" id="currentDate"></div>
+                <div class="weight-input-container">
+                    <span>Poids (kg):</span>
+                    <input type="number" class="weight-input" id="weightInput" placeholder="0" min="0" step="0.5">
+                </div>
+            </div>
+        </header>
+
+        <div class="controls">
+            <div class="control-buttons">
+                <button class="control-btn" id="startAll">▶ Démarrer tous les timers</button>
+                <button class="control-btn reset" id="resetAll">↺ Réinitialiser tous</button>
+                <button class="control-btn save" id="saveWorkout">💾 Sauvegarder</button>
+            </div>
+            
+            <div class="pagination">
+                <button class="page-btn" id="prevPage">◀</button>
+                <span class="page-info" id="pageInfo">Page 1/100</span>
+                <button class="page-btn" id="nextPage">▶</button>
+            </div>
+        </div>
+
+        <div class="workout-table" id="workoutTable">
+            <div class="table-header">
+                <div>#</div>
+                <div>Exercice (Saisie libre)</div>
+                <div>Répétitions</div>
+                <div>Poids (kg)</div>
+                <div>Décompte (Repos)</div>
+            </div>
+            <!-- Les lignes seront générées par JavaScript -->
+        </div>
+
+        <div class="instructions">
+            <h3>📋 Comment utiliser l'application :</h3>
+            <ul>
+                <li>1. Saisis ton exercice dans la colonne "Exercice"</li>
+                <li>2. Indique le nombre de répétitions dans la colonne "Répétitions"</li>
+                <li>3. Sélectionne le temps de repos souhaité (30s, 60s, 90s)</li>
+                <li>4. Clique sur "Démarrer" pour lancer le compte à rebours</li>
+                <li>5. Une notification sonore se déclenche à la fin du timer</li>
+                <li>6. Passe à l'exercice suivant une fois le repos terminé</li>
+            </ul>
+        </div>
+
+        <div class="notification" id="notification">
+            ⏰ Timer terminé ! Passe à l'exercice suivant.
+        </div>
+
+        <div class="sound-toggle" id="soundToggle">
+            <span>🔇</span>
+            <span>Son désactivé</span>
+        </div>
+    </div>
+
+    <script>
+        // Audio pour la notification
+        const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        let soundEnabled = false;
+
+        // Fonction pour jouer un son de notification
+        function playNotificationSound() {
+            if (!soundEnabled) return;
+            
+            try {
+                const oscillator = audioContext.createOscillator();
+                const gainNode = audioContext.createGain();
+                
+                oscillator.connect(gainNode);
+                gainNode.connect(audioContext.destination);
+                
+                oscillator.frequency.setValueAtTime(800, audioContext.currentTime);
+                oscillator.frequency.exponentialRampToValueAtTime(400, audioContext.currentTime + 0.5);
+                
+                gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+                gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.5);
+                
+                oscillator.start(audioContext.currentTime);
+                oscillator.stop(audioContext.currentTime + 0.5);
+            } catch (e) {
+                console.log("Audio non supporté");
+            }
+        }
+
+        // Gestionnaire du toggle son
+        const soundToggle = document.getElementById('soundToggle');
+        soundToggle.addEventListener('click', () => {
+            soundEnabled = !soundEnabled;
+            soundToggle.classList.toggle('active', soundEnabled);
+            const icon = soundToggle.querySelector('span:first-child');
+            const text = soundToggle.querySelector('span:last-child');
+            
+            if (soundEnabled) {
+                icon.textContent = '🔊';
+                text.textContent = 'Son activé';
+                // Démarrer l'audio context si nécessaire
+                if (audioContext.state === 'suspended') {
+                    audioContext.resume();
+                }
+            } else {
+                icon.textContent = '🔇';
+                text.textContent = 'Son désactivé';
+            }
+        });
+
+        // Classe pour gérer un timer
+        class WorkoutTimer {
+            constructor(rowElement, index) {
+                this.row = rowElement;
+                this.index = index;
+                this.select = rowElement.querySelector('.time-select');
+                this.button = rowElement.querySelector('.timer-btn');
+                this.display = rowElement.querySelector('.timer-display');
+                this.exerciseInput = rowElement.querySelector('.exercise-input');
+                this.repsInput = rowElement.querySelector('.reps-input');
+                this.weightInput = rowElement.querySelector('.weight-input-row');
+                
+                // Récupérer les données sauvegardées
+                const data = allWorkoutData[this.index];
+                this.timeLeft = data.timeLeft;
+                this.timerId = null;
+                this.isRunning = data.isRunning;
+                
+                // Mettre à jour l'affichage initial
+                this.display.textContent = formatTime(this.timeLeft);
+                this.select.value = data.time;
+                
+                // Événements
+                this.button.addEventListener('click', () => this.toggleTimer());
+                this.select.addEventListener('change', () => this.updateTimeDisplay());
+                this.exerciseInput.addEventListener('input', () => this.saveData());
+                this.repsInput.addEventListener('input', () => this.saveData());
+                this.weightInput.addEventListener('input', () => this.saveData());
+            }
+            
+            saveData() {
+                allWorkoutData[this.index] = {
+                    exercise: this.exerciseInput.value,
+                    reps: this.repsInput.value,
+                    weight: this.weightInput.value,
+                    time: parseInt(this.select.value),
+                    timeLeft: this.timeLeft,
+                    isRunning: this.isRunning,
+                    timerId: this.timerId
+                };
+            }
+            
+            updateTimeDisplay() {
+                this.timeLeft = parseInt(this.select.value);
+                this.display.textContent = formatTime(this.timeLeft);
+                this.saveData();
+            }
+            
+            toggleTimer() {
+                if (this.isRunning) {
+                    this.stopTimer();
+                } else {
+                    this.startTimer();
+                }
+            }
+            
+            startTimer() {
+                if (this.isRunning) return;
+                
+                this.isRunning = true;
+                this.button.textContent = '⏸️ Pause';
+                this.button.style.background = 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)';
+                this.row.classList.add('active');
+                this.display.classList.add('active');
+                
+                this.saveData();
+                
+                this.timerId = setInterval(() => {
+                    this.timeLeft--;
+                    this.display.textContent = formatTime(this.timeLeft);
+                    this.saveData();
+                    
+                    if (this.timeLeft <= 0) {
+                        this.stopTimer();
+                        playNotificationSound();
+                        showNotification('⏰ Timer terminé ! Passe à l\'exercice suivant.');
+                        
+                        // Activer la ligne suivante si elle existe
+                        const nextRow = this.row.nextElementSibling;
+                        if (nextRow && nextRow.classList.contains('table-row')) {
+                            nextRow.classList.add('active');
+                        }
+                    }
+                }, 1000);
+            }
+            
+            stopTimer() {
+                if (!this.isRunning) return;
+                
+                this.isRunning = false;
+                clearInterval(this.timerId);
+                this.button.textContent = '▶ Démarrer';
+                this.button.style.background = 'linear-gradient(135deg, #00dbde 0%, #0083b0 100%)';
+                this.row.classList.remove('active');
+                this.display.classList.remove('active');
+                
+                this.saveData();
+                
+                if (this.timeLeft <= 0) {
+                    this.timeLeft = parseInt(this.select.value);
+                    this.display.textContent = formatTime(this.timeLeft);
+                    this.saveData();
+                }
+            }
+            
+            reset() {
+                this.stopTimer();
+                this.timeLeft = parseInt(this.select.value);
+                this.display.textContent = formatTime(this.timeLeft);
+                this.saveData();
+            }
+        }
+
+        // Variables globales
+        const workoutTable = document.getElementById('workoutTable');
+        const timers = [];
+        let currentPage = 1;
+        const totalPages = 100;
+        const exercisesPerPage = 20;
+        
+        // Données de toutes les pages
+        const allWorkoutData = Array.from({length: totalPages * exercisesPerPage}, (_, i) => ({
+            exercise: '',
+            reps: '',
+            weight: '',
+            time: 60,
+            timeLeft: 60,
+            isRunning: false,
+            timerId: null
+        }));
+        
+        function formatTime(seconds) {
+            const mins = Math.floor(seconds / 60);
+            const secs = seconds % 60;
+            return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+        }
+        
+        function renderPage(page) {
+            console.log('Rendering page:', page);
+            
+            // S'assurer que l'en-tête existe
+            if (!workoutTable.querySelector('.table-header')) {
+                workoutTable.innerHTML = `
+                    <div class="table-header">
+                        <div>#</div>
+                        <div>Exercice (Saisie libre)</div>
+                        <div>Répétitions</div>
+                        <div>Poids (kg)</div>
+                        <div>Décompte (Repos)</div>
+                    </div>
+                `;
+            }
+            
+            // Supprimer les anciennes lignes
+            const oldRows = workoutTable.querySelectorAll('.table-row');
+            oldRows.forEach(row => row.remove());
+            
+            // Réinitialiser les timers
+            timers.length = 0;
+            
+            const startIndex = (page - 1) * exercisesPerPage;
+            
+            // Créer les 20 lignes pour cette page
+            for (let i = 0; i < exercisesPerPage; i++) {
+                const globalIndex = startIndex + i;
+                const data = allWorkoutData[globalIndex];
+                
+                const row = document.createElement('div');
+                row.className = 'table-row';
+                row.dataset.index = globalIndex;
+                row.innerHTML = `
+                    <div class="row-number">${(globalIndex + 1).toString().padStart(2, '0')}</div>
+                    <div>
+                        <input type="text" class="exercise-input" placeholder="Entrer l'exercice ici" value="${data.exercise}">
+                    </div>
+                    <div>
+                        <input type="number" class="reps-input" placeholder="Nombre" min="0" value="${data.reps}">
+                    </div>
+                    <div>
+                        <input type="number" class="weight-input-row" placeholder="0" min="0" step="0.5" value="${data.weight}">
+                    </div>
+                    <div class="timer-controls">
+                        <select class="time-select">
+                            <option value="30" ${data.time === 30 ? 'selected' : ''}>30s</option>
+                            <option value="45" ${data.time === 45 ? 'selected' : ''}>45s</option>
+                            <option value="60" ${data.time === 60 ? 'selected' : ''}>60s</option>
+                            <option value="90" ${data.time === 90 ? 'selected' : ''}>90s</option>
+                            <option value="120" ${data.time === 120 ? 'selected' : ''}>120s</option>
+                        </select>
+                        <button class="timer-btn">${data.isRunning ? '⏸️ Pause' : '▶ Démarrer'}</button>
+                        <div class="timer-display">${formatTime(data.timeLeft)}</div>
+                    </div>
+                `;
+                
+                workoutTable.appendChild(row);
+                timers.push(new WorkoutTimer(row, globalIndex));
+            }
+            
+            // Mettre à jour l'affichage de la page
+            document.getElementById('pageInfo').textContent = `Page ${page}/${totalPages}`;
+            
+            // Initialiser le premier exercice comme actif
+            const firstRow = workoutTable.querySelector('.table-row');
+            if (firstRow) {
+                firstRow.classList.add('active');
+            }
+            
+            console.log('Created', timers.length, 'timers');
+        }
+        
+        function formatTime(seconds) {
+            const mins = Math.floor(seconds / 60);
+            const secs = seconds % 60;
+            return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+        }
+        
+        // Initialiser la première page après que le DOM soit chargé
+        document.addEventListener('DOMContentLoaded', () => {
+            renderPage(currentPage);
+        });
+        
+        // Également essayer de rendre immédiatement au cas où
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', () => renderPage(currentPage));
+        } else {
+            renderPage(currentPage);
+        }
+        
+        // Mettre à jour la date actuelle
+        function updateDate() {
+            const now = new Date();
+            const options = { 
+                weekday: 'long', 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric' 
+            };
+            document.getElementById('currentDate').textContent = 
+                now.toLocaleDateString('fr-FR', options);
+        }
+        
+        updateDate();
+        
+        // Gestionnaires de pagination
+        document.getElementById('prevPage').addEventListener('click', () => {
+            if (currentPage > 1) {
+                currentPage--;
+                renderPage(currentPage);
+                showNotification(`Page ${currentPage}`);
+            }
+        });
+        
+        document.getElementById('nextPage').addEventListener('click', () => {
+            if (currentPage < totalPages) {
+                currentPage++;
+                renderPage(currentPage);
+                showNotification(`Page ${currentPage}`);
+            }
+        });
+        
+        // Sauvegarder le poids global
+        document.getElementById('weightInput').addEventListener('input', function() {
+            localStorage.setItem('workoutWeight', this.value);
+        });
+        
+        // Charger le poids sauvegardé
+        const savedWeight = localStorage.getItem('workoutWeight');
+        if (savedWeight) {
+            document.getElementById('weightInput').value = savedWeight;
+        }
+            
+            workoutTable.appendChild(row);
+            timers.push(new WorkoutTimer(row));
+        }
+
+        // Fonction pour afficher les notifications
+        function showNotification(message) {
+            const notification = document.getElementById('notification');
+            notification.textContent = message || "⏰ Timer terminé ! Passe à l'exercice suivant.";
+            notification.classList.add('show');
+            
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 3000);
+        }
+
+        // Gestionnaires des boutons de contrôle
+        document.getElementById('startAll').addEventListener('click', () => {
+            timers.forEach(timer => timer.startTimer());
+            showNotification('▶ Tous les timers démarrés !');
+        });
+
+        document.getElementById('resetAll').addEventListener('click', () => {
+            timers.forEach(timer => timer.reset());
+            showNotification('↺ Tous les timers réinitialisés !');
+        });
+
+        document.getElementById('saveWorkout').addEventListener('click', () => {
+            const workoutData = {
+                date: new Date().toISOString(),
+                weight: document.getElementById('weightInput').value || '0',
+                page: currentPage,
+                exercises: []
+            };
+            
+            // Sauvegarder toutes les données
+            const allData = {
+                workoutData: allWorkoutData,
+                currentPage: currentPage,
+                weight: document.getElementById('weightInput').value || '0',
+                savedAt: new Date().toISOString()
+            };
+            
+            // Créer un blob et télécharger
+            const blob = new Blob([JSON.stringify(allData, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `workout_complete_${new Date().toISOString().split('T')[0]}.json`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            
+            showNotification('💾 Toutes les données sauvegardées !');
+        });
+
+        // Activer le son au premier clic
+        document.addEventListener('click', function initAudio() {
+            if (audioContext.state === 'suspended') {
+                audioContext.resume();
+            }
+            document.removeEventListener('click', initAudio);
+        });
+        
+        // Fonction pour charger des données sauvegardées
+        function loadWorkoutData(data) {
+            if (data.workoutData) {
+                data.workoutData.forEach((item, index) => {
+                    if (index < allWorkoutData.length) {
+                        allWorkoutData[index] = item;
+                    }
+                });
+            }
+            if (data.currentPage) {
+                currentPage = data.currentPage;
+            }
+            if (data.weight) {
+                document.getElementById('weightInput').value = data.weight;
+            }
+            renderPage(currentPage);
+            showNotification('📂 Données chargées !');
+        }
+        
+        // Ajouter un bouton pour charger des données
+        const loadBtn = document.createElement('button');
+        loadBtn.className = 'control-btn';
+        loadBtn.textContent = '📂 Charger';
+        loadBtn.style.background = 'linear-gradient(135deg, #f6d365 0%, #fda085 100%)';
+        loadBtn.onclick = () => {
+            const input = document.createElement('input');
+            input.type = 'file';
+            input.accept = '.json';
+            input.onchange = (e) => {
+                const file = e.target.files[0];
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    try {
+                        const data = JSON.parse(e.target.result);
+                        loadWorkoutData(data);
+                    } catch (err) {
+                        showNotification('❌ Erreur de chargement');
+                    }
+                };
+                reader.readAsText(file);
+            };
+            input.click();
+        };
+        document.querySelector('.control-buttons').appendChild(loadBtn);
+    </script>
+</body>
+</html>

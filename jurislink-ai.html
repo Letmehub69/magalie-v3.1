@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JurisLink AI - L'Écosystème Juridique de Demain</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #1a365d;
+            --secondary-color: #2d3748;
+            --accent-color: #3182ce;
+            --success-color: #38a169;
+            --warning-color: #d69e2e;
+            --danger-color: #e53e3e;
+            --light-color: #f7fafc;
+            --dark-color: #2d3748;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 30px 0;
+            border-radius: 0 0 var(--border-radius) var(--border-radius);
+            box-shadow: var(--box-shadow);
+            margin-bottom: 30px;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo i {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+        }
+
+        .logo h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-top: 5px;
+        }
+
+        .auth-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #2c5282;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+
+        .btn-outline:hover {
+            background-color: white;
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            margin-bottom: 40px;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            color: var(--secondary-color);
+        }
+
+        .highlight {
+            background-color: rgba(49, 130, 206, 0.1);
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        /* Portals Section */
+        .portals-section {
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 4px;
+            background-color: var(--accent-color);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        .portals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 30px;
+        }
+
+        .portal-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .portal-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .portal-header {
+            padding: 25px;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .client-portal .portal-header {
+            background: linear-gradient(135deg, #38a169, #2f855a);
+        }
+
+        .lawyer-portal .portal-header {
+            background: linear-gradient(135deg, #3182ce, #2c5282);
+        }
+
+        .portal-header i {
+            font-size: 2rem;
+        }
+
+        .portal-header h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .portal-content {
+            padding: 25px;
+        }
+
+        .portal-features {
+            list-style-type: none;
+            margin-bottom: 25px;
+        }
+
+        .portal-features li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .portal-features li:last-child {
+            border-bottom: none;
+        }
+
+        .portal-features i {
+            color: var(--accent-color);
+        }
+
+        .ai-assistant {
+            background-color: #f7fafc;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .ai-assistant h4 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Features Table */
+        .features-section {
+            margin-bottom: 50px;
+        }
+
+        .features-table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            overflow: hidden;
+        }
+
+        .features-table thead {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .features-table th {
+            padding: 20px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .features-table tbody tr {
+            border-bottom: 1px solid #eee;
+        }
+
+        .features-table tbody tr:nth-child(even) {
+            background-color: #f9fafb;
+        }
+
+        .features-table td {
+            padding: 20px;
+        }
+
+        .feature-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(49, 130, 206, 0.1);
+            border-radius: 50%;
+            margin-right: 10px;
+            color: var(--accent-color);
+        }
+
+        /* Security Section */
+        .security-section {
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 40px;
+            margin-bottom: 50px;
+        }
+
+        .security-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .security-item {
+            text-align: center;
+            padding: 25px;
+            border-radius: var(--border-radius);
+            background-color: #f7fafc;
+            transition: var(--transition);
+        }
+
+        .security-item:hover {
+            background-color: #edf2f7;
+        }
+
+        .security-item i {
+            font-size: 3rem;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+        }
+
+        .security-item h4 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        /* Benefits Section */
+        .benefits-section {
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 40px;
+            margin-bottom: 50px;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .benefit-item {
+            padding: 25px;
+            border-radius: var(--border-radius);
+            background-color: #f7fafc;
+            border-left: 4px solid var(--success-color);
+        }
+
+        .benefit-item h4 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 40px 0;
+            border-radius: var(--border-radius) var(--border-radius) 0 0;
+            margin-top: 50px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .copyright {
+            opacity: 0.8;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+            
+            .portals-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .features-table {
+                display: block;
+                overflow-x: auto;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-balance-scale"></i>
+                    <div>
+                        <h1>Juris<span>Link</span> AI</h1>
+                        <p class="tagline">L'Écosystème Juridique de Demain</p>
+                    </div>
+                </div>
+                <div class="auth-buttons">
+                    <button class="btn btn-outline" id="clientPortalBtn">
+                        <i class="fas fa-user"></i> Portail Client
+                    </button>
+                    <button class="btn btn-primary" id="lawyerPortalBtn">
+                        <i class="fas fa-gavel"></i> Portail Avocat
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h2>Supprimer le chaos administratif pour se concentrer sur la stratégie</h2>
+            <p>JurisLink AI transforme la collaboration juridique en une expérience fluide, sécurisée et augmentée par l'<span class="highlight">intelligence artificielle</span>. Notre plateforme révolutionnaire permet à l'avocat de se concentrer sur la stratégie et au client de se sentir soutenu et informé.</p>
+            <button class="btn btn-primary" id="demoBtn">
+                <i class="fas fa-play-circle"></i> Découvrir la démo
+            </button>
+        </section>
+
+        <section class="portals-section">
+            <h2 class="section-title">Les Deux Portails JurisLink AI</h2>
+            <div class="portals-grid">
+                <!-- Portail Client -->
+                <div class="portal-card client-portal">
+                    <div class="portal-header">
+                        <i class="fas fa-user-shield"></i>
+                        <h3>Portail Client : "L'Espace Sérénité"</h3>
+                    </div>
+                    <div class="portal-content">
+                        <p>Pour le client, la cour est une source de stress. Notre interface est intuitive et rassurante.</p>
+                        
+                        <ul class="portal-features">
+                            <li><i class="fas fa-chart-line"></i> <strong>Tableau de Bord :</strong> Chronologie visuelle montrant où en est le dossier</li>
+                            <li><i class="fas fa-file-upload"></i> <strong>Coffre-fort à Documents :</strong> Espace de dépôt "Drag & Drop" avec tri AI automatique</li>
+                            <li><i class="fas fa-calendar-check"></i> <strong>Calendrier intelligent :</strong> Rappels automatiques pour les dates de cour</li>
+                            <li><i class="fas fa-comments"></i> <strong>Messagerie sécurisée :</strong> Remplace les emails perdus, centralise les échanges</li>
+                        </ul>
+                        
+                        <div class="ai-assistant">
+                            <h4><i class="fas fa-robot"></i> Assistant AI "JurisGuide"</h4>
+                            <p><strong>Aide à la rédaction :</strong> Le client explique son histoire en langage courant, l'AI reformule les faits de manière chronologique et factuelle pour l'avocat.</p>
+                            <p><strong>Simplificateur :</strong> Si l'avocat envoie un document complexe, le client peut demander à l'AI : "Explique-moi ce paragraphe en termes simples".</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portail Avocat -->
+                <div class="portal-card lawyer-portal">
+                    <div class="portal-header">
+                        <i class="fas fa-gavel"></i>
+                        <h3>Portail Avocat : "La Tour de Contrôle"</h3>
+                    </div>
+                    <div class="portal-content">
+                        <p>Pour l'avocat, l'outil doit être un multiplicateur de force pour gérer plus de dossiers avec plus de précision.</p>
+                        
+                        <ul class="portal-features">
+                            <li><i class="fas fa-clipboard-check"></i> <strong>Gestion de la Preuve :</strong> Tableau où chaque document est lié à un argument juridique</li>
+                            <li><i class="fas fa-search"></i> <strong>OCR Intelligent :</strong> Lecture automatique de texte dans les documents scannés</li>
+                            <li><i class="fas fa-history"></i> <strong>Journal d'Audit :</strong> Historique complet de qui a consulté ou modifié quel document</li>
+                            <li><i class="fas fa-chart-bar"></i> <strong>Analytics :</strong> Statistiques sur l'avancement des dossiers et temps passé</li>
+                        </ul>
+                        
+                        <div class="ai-assistant">
+                            <h4><i class="fas fa-brain"></i> Analyste AI "LexiPro"</h4>
+                            <p><strong>Détection de failles :</strong> L'AI analyse les documents du client et signale les contradictions ou les pièces manquantes.</p>
+                            <p><strong>Générateur de Plaidoirie :</strong> En se basant sur les preuves au dossier, l'AI propose une structure d'argumentation et recherche des références de jurisprudence similaires.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features-section">
+            <h2 class="section-title">Structure Optimisée de la Plateforme</h2>
+            <table class="features-table">
+                <thead>
+                    <tr>
+                        <th>Onglet</th>
+                        <th>Fonctionnalité Clé</th>
+                        <th>Bénéfice</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="feature-icon"><i class="fas fa-stream"></i></span> Chronologie</td>
+                        <td>Vue d'ensemble des étapes passées et futures.</td>
+                        <td>Transparence totale.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="feature-icon"><i class="fas fa-folder-open"></i></span> Documents</td>
+                        <td>Système de dossiers partagés avec OCR (lecture de texte).</td>
+                        <td>Zéro papier, recherche rapide.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="feature-icon"><i class="fas fa-robot"></i></span> Espace IA</td>
+                        <td>Chatbot spécialisé pour la préparation des interrogatoires.</td>
+                        <td>Gain de temps massif.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="feature-icon"><i class="fas fa-comments"></i></span> Communication</td>
+                        <td>Messagerie sécurisée intégrée (remplace les emails perdus).</td>
+                        <td>Centralisation des échanges.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="feature-icon"><i class="fas fa-calendar-alt"></i></span> Calendrier</td>
+                        <td>Rappels automatiques pour les dates de cour et délais.</td>
+                        <td>Aucune échéance manquée.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="security-section">
+            <h2 class="section-title">Sécurité et Accès : Le Protocole "Double-Clé"</h2>
+            <p>L'accès à la plateforme ne repose pas sur un simple mot de passe, mais sur une authentification de niveau bancaire.</p>
+            
+            <div class="security-grid">
+                <div class="security-item">
+                    <i class="fas fa-key"></i>
+                    <h4>Identifiants Uniques</h4>
+                    <p>Numéro de Dossier unique + Code de Dossier temporaire (généré par le cabinet).</p>
+                </div>
+                
+                <div class="security-item">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h4>Double Authentification (2FA)</h4>
+                    <p>Code envoyé par SMS ou application d'authentification pour garantir que seuls les intervenants autorisés accèdent aux données sensibles.</p>
+                </div>
+                
+                <div class="security-item">
+                    <i class="fas fa-lock"></i>
+                    <h4>Chiffrement de bout en bout</h4>
+                    <p>Tous les documents déposés sont cryptés, rendant les fuites de données impossibles.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="benefits-section">
+            <h2 class="section-title">Pourquoi cette approche est "Exponentielle" ?</h2>
+            
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <h4><i class="fas fa-clock"></i> Réduction du temps administratif (-40%)</h4>
+                    <p>L'AI fait le travail de tri et de résumé que les secrétaires ou les avocats juniors font normalement.</p>
+                </div>
+                
+                <div class="benefit-item">
+                    <h4><i class="fas fa-check-circle"></i> Qualité du dossier accrue</h4>
+                    <p>En croisant les données via l'AI, les erreurs de faits sont détectées avant d'arriver devant le juge.</p>
+                </div>
+                
+                <div class="benefit-item">
+                    <h4><i class="fas fa-crown"></i> Expérience Client Premium</h4>
+                    <p>Le client se sent pris en charge 24h/24 par l'assistant AI, même quand l'avocat est au tribunal.</p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px; padding: 30px; background-color: rgba(49, 130, 206, 0.1); border-radius: var(--border-radius);">
+                <h3 style="color: var(--primary-color); margin-bottom: 15px;">JurisLink AI n'est pas qu'un site d'échange de fichiers</h3>
+                <p style="font-size: 1.2rem; font-weight: 600;">C'est un cerveau collectif qui organise la vérité pour gagner des causes.</p>
+            </div>
+        </section>
+
+        <section style="text-align: center; margin: 50px 0;">
+            <button class="btn btn-primary" id="startProjectBtn" style="padding: 18px 40px; font-size: 1.2rem;">
+                <i class="fas fa-rocket"></i> Commencer votre projet JurisLink AI
+            </button>
+            <p style="margin-top: 20px; color: var(--secondary-color);">Contactez-nous pour une démonstration personnalisée</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-balance-scale"></i> JurisLink AI
+                </div>
+                <div class="copyright">
+                    &copy; 2024 JurisLink AI - L'Écosystème Juridique de Demain. Tous droits réservés.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Script pour les interactions basiques
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animation des boutons d'authentification
+            const clientPortalBtn = document.getElementById('clientPortalBtn');
+            const lawyerPortalBtn = document.getElementById('lawyerPortalBtn');
+            const demoBtn = document.getElementById('demoBtn');
+            const startProjectBtn = document.getElementById('startProjectBtn');
+            
+            clientPortalBtn.addEventListener('click', function() {
+                alert('Simulation : Ouverture du portail client.\n\nDans la version complète, cela ouvrirait le système d\'authentification avec le protocole Double-Clé.');
+            });
+            
+            lawyerPortalBtn.addEventListener('click', function() {
+                alert('Simulation : Ouverture du portail avocat.\n\nDans la version complète, cela ouvrirait le système d\'authentification avec le protocole Double-Clé.');
+            });
+            
+            demoBtn.addEventListener('click', function() {
+                alert('Démo interactive de JurisLink AI\n\nCette démo présenterait :\n1. Le portail client "L\'Espace Sérénité"\n2. Le portail avocat "La Tour de Contrôle"\n3. Les fonctionnalités AI JurisGuide et LexiPro\n4. Le protocole de sécurité Double-Clé');
+            });
+            
+            startProjectBtn.addEventListener('click', function() {
+                alert('Démarrage de votre projet JurisLink AI\n\nUn consultant vous contactera pour :\n1. Analyser vos besoins spécifiques\n2. Configurer votre instance sécurisée\n3. Former votre équipe à la plateforme\n4. Intégrer vos processus existants');
+            });
+
+            // Animation des cartes au survol
+            const portalCards = document.querySelectorAll('.portal-card');
+            portalCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

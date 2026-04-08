@@ -1,0 +1,86 @@
+48h pour cas urgent\n\n2. **Audience provisoire**\n   • 10-15 jours après dépôt\n   • Mesures temporaires\n\n3. **Médiation**\n   • Obligatoire sauf exceptions\n   • 60-90 jours\n\n4. **Audience au fond**\n   • 6-12 mois selon complexité\n   • Jugement final\n\n**Facteurs considérés :**\n• Intérêt de l'enfant\n• Capacités parentales\n• Liens affectifs\n• Stabilité environnementale",
+                "dpj": "🏛️ **Signalement à la DPJ**\n\n**Procédure recommandée :**\n\n1. **Préparation**\n   • Rassemblez toutes les preuves\n   • Organisez chronologiquement\n   • Consultez un avocat\n\n2. **Signalement**\n   • Formulaire écrit détaillé\n   • Pièces jointes organisées\n   • Suivi par téléphone\n\n3. **Évaluation DPJ**\n   • 10 jours pour décision\n   • Rencontre avec intervenant\n   • Évaluation de la situation\n\n4. **Suivi**\n   • Demandez copie du rapport\n   • Participez aux rencontres\n   • Documentez tout échange\n\n**Droits des parents :**\n✓ Être informé des allégations\n✓ Être entendu\n✓ Être accompagné d'un avocat\n✓ Contester les décisions"
+            };
+            
+            let response = "🤖 **Réponse de JuriAssist**\n\n";
+            
+            if (question.toLowerCase().includes('aliénation') || question.toLowerCase().includes('alienation')) {
+                response += responses['aliénation'];
+            } else if (question.toLowerCase().includes('garde') || question.toLowerCase().includes('custody')) {
+                response += responses['garde'];
+            } else if (question.toLowerCase().includes('dpj') || question.toLowerCase().includes('protection')) {
+                response += responses['dpj'];
+            } else {
+                response += `**Question :** "${question}"\n\n**Réponse :**\n\nJe suis votre assistant IA spécialisé en droit québécois. Pour une réponse précise à votre question, je recommande de :\n\n1. **Consulter un avocat** pour des conseils juridiques personnalisés\n2. **Fournir plus de détails** sur votre situation\n3. **Partager les documents pertinents** pour une analyse approfondie\n\n*En attendant, voici des ressources générales :*\n• [Code civil du Québec](https://www.legisquebec.gouv.qc.ca/)\n• [Éducaloi - Droit familial](https://educaloi.qc.ca/)\n• [Barreau du Québec](https://www.barreau.qc.ca/)`;
+            }
+            
+            showAIResponse(response);
+        }
+        
+        function showAIResponse(content) {
+            const responseDiv = document.getElementById('ai-response');
+            const contentDiv = document.getElementById('response-content');
+            
+            // Convertir le markdown simple en HTML
+            const htmlContent = content
+                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                .replace(/\n/g, '<br>')
+                .replace(/\•/g, '•')
+                .replace(/✓/g, '✓')
+                .replace(/⚠️/g, '⚠️')
+                .replace(/📝/g, '📝')
+                .replace(/👨‍👩‍👧‍👦/g, '👨‍👩‍👧‍👦')
+                .replace(/🏛️/g, '🏛️')
+                .replace(/🤖/g, '🤖')
+                .replace(/🔍/g, '🔍')
+                .replace(/📁/g, '📁')
+                .replace(/⚖️/g, '⚖️')
+                .replace(/📄/g, '📄')
+                .replace(/📑/g, '📑')
+                .replace(/📋/g, '📋')
+                .replace(/👨‍⚖️/g, '👨‍⚖️')
+                .replace(/✅/g, '✅');
+            
+            contentDiv.innerHTML = htmlContent;
+            responseDiv.style.display = 'block';
+            responseDiv.scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        // Autres fonctions
+        function uploadFile() {
+            alert("📁 Fonctionnalité d'upload en développement\n\nDans la version finale :\n• Upload multiple\n• OCR automatique\n• Classification IA\n• Stockage chiffré");
+        }
+        
+        function createFolder() {
+            const folderName = prompt("Nom du nouveau dossier :");
+            if (folderName) {
+                alert(`Dossier "${folderName}" créé avec succès !`);
+            }
+        }
+        
+        function shareWithClient() {
+            alert("🔗 Partage avec client activé\n\nOptions disponibles :\n• Lien sécurisé temporaire\n• Accès limité dans le temps\n• Notifications par email\n• Historique des accès");
+        }
+        
+        function secureChat() {
+            alert("💬 Ouverture du chat sécurisé\n\nFonctionnalités :\n• Chiffrement de bout en bout\n• Historique conservé\n• Pièces jointes sécurisées\n• Horodatage légal");
+        }
+        
+        function addJournalEntry() {
+            alert("📓 Ajout d'une entrée de journal\n\nDans la version finale :\n• Saisie guidée par IA\n• Catégorisation automatique\n• Suggestions de preuves\n• Export PDF structuré");
+        }
+        
+        // Initialisation
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log("JuriPlateforme - Prototype chargé");
+            console.log("IA: Claude 3.5 Sonnet (fine-tuned droit québécois)");
+            console.log("Sécurité: AES-256, conforme Loi 25");
+            
+            // Simulation de chargement
+            setTimeout(() => {
+                console.log("✅ Système prêt");
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+{
+  "agent": "louix",
+  "version": "1.0",
+  "criteria": [
+    {
+      "id": "build_clean",
+      "name": "Build Clean",
+      "description": "npm run build passe sans erreurs TypeScript ni warnings critiques",
+      "points": 1,
+      "check": "npm run build 2>&1 | grep -c 'error' = 0"
+    },
+    {
+      "id": "ui_states",
+      "name": "UI States",
+      "description": "Pas de broken UI: elements manquants, overflow visible, z-index incorrect, dead buttons/tabs",
+      "points": 1,
+      "check": "Visual inspection of all modified components"
+    },
+    {
+      "id": "design_system",
+      "name": "Design System",
+      "description": "Couleurs, fonts, glass-morphic, emerald accent respectes. Pas de couleurs hardcodees hors palette.",
+      "points": 1,
+      "check": "grep for hardcoded colors not in palette"
+    },
+    {
+      "id": "responsive",
+      "name": "Responsive",
+      "description": "Layout correct sur mobile (<768px), tablet (768-1024px), desktop (>1024px). Pas de horizontal scroll.",
+      "points": 1,
+      "check": "Check Tailwind breakpoints sm/md/lg/xl"
+    },
+    {
+      "id": "animations",
+      "name": "Animations",
+      "description": "Framer Motion transitions fonctionnelles. Pas de flash, pas de jump, stagger correct.",
+      "points": 1,
+      "check": "Review motion.div initial/animate/exit props"
+    }
+  ],
+  "passing_score": 5,
+  "verdict_rules": {
+    "5": "APPROVED",
+    "4": "NEEDS_FIX (minor)",
+    "3_or_less": "NEEDS_FIX (critical)"
+  }
+}

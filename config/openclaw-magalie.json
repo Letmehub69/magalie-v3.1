@@ -1,0 +1,317 @@
+{
+  "$schema": "https://openclaw.ai/schemas/config/v1",
+  "version": "3.1",
+  "description": "Configuration Magalie v3.1 - Architecture multi-agent optimisée",
+  
+  "agents": {
+    "defaults": {
+      "workspace": "/Users/house/.openclaw/workspace-main",
+      "thinking": "high",
+      "subagents": {
+        "maxConcurrent": "dynamic",
+        "dynamic": {
+          "min": 2,
+          "max": 6,
+          "metric": "budget_remaining",
+          "adjustmentInterval": "5m"
+        },
+        "runTimeoutSeconds": 600,
+        "maxSpawnDepth": 2
+      },
+      "heartbeat": {
+        "every": "30s",
+        "prompt": "Vérifier: 1. Santé Magalie 2. Budget projets actifs 3. Performances nœuds 4. Services externes. Si tout OK: HEARTBEAT_OK."
+      }
+    },
+    
+    "list": [
+      {
+        "id": "magalie",
+        "name": "Magalie",
+        "emoji": "👩‍⚕️",
+        "model": {
+          "primary": "anthropic/claude-sonnet-4-6",
+          "fallbacks": ["anthropic/claude-haiku-3-5", "deepseek/deepseek-reasoner"]
+        },
+        "thinking": "high",
+        "description": "Orchestrateur principal - gère l'arbre de projet et l'orchestration des agents",
+        "tools": ["supabase", "git", "prometheus", "redis", "budget"],
+        "channels": {
+          "opus": "pour raisonnements complexes et décisions d'architecture",
+          "code": "pour revue de code et implémentation technique"
+        },
+        "runtime": {
+          "type": "acp",
+          "acp": {
+            "agent": "claude",
+            "backend": "acpx",
+            "mode": "persistent",
+            "permissionMode": "approve-all",
+            "session": "magalie-orchestrator"
+          }
+        }
+      },
+      {
+        "id": "bob",
+        "name": "Bob",
+        "emoji": "👨‍💻",
+        "model": {
+          "primary": "anthropic/claude-sonnet-4-6",
+          "fallbacks": ["anthropic/claude-haiku-3-5"]
+        },
+        "thinking": "medium",
+        "description": "Builder atomique - exécute les nœuds atomiques du projet",
+        "tools": ["git", "supabase", "code-review"],
+        "runtime": {
+          "type": "acp",
+          "acp": {
+            "agent": "claude",
+            "backend": "acpx",
+            "mode": "session",
+            "permissionMode": "approve-all",
+            "session": "bob-builder"
+          }
+        },
+        "constraints": {
+          "maxBuildTime": "2h",
+          "atomicOnly": true,
+          "branchPerTask": true
+        }
+      },
+      {
+        "id": "fiton",
+        "name": "Fiton",
+        "emoji": "📊",
+        "model": {
+          "primary": "anthropic/claude-haiku-3-5",
+          "fallbacks": ["deepseek/deepseek-chat"]
+        },
+        "thinking": "low",
+        "description": "Monitor - détection des blocages et surveillance des métriques",
+        "tools": ["prometheus", "supabase", "alerts"],
+        "runtime": {
+          "type": "acp",
+          "acp": {
+            "agent": "claude",
+            "backend": "acpx",
+            "mode": "persistent",
+            "permissionMode": "approve-all",
+            "session": "fiton-monitor"
+          }
+        },
+        "heartbeat": {
+          "every": "1m",
+          "prompt": "Surveiller: 1. Nœuds bloqués (>15min) 2. Budgets (>80%) 3. Services santé. Alerter si problème."
+        }
+      },
+      {
+        "id": "scout",
+        "name": "Scout",
+        "emoji": "🔍",
+        "model": {
+          "primary": "anthropic/claude-haiku-3-5"
+        },
+        "thinking": "low",
+        "description": "Évaluateur - détermine le cycle (express/complet) pour chaque nœud",
+        "tools": ["supabase", "complexity-analysis"],
+        "runtime": {
+          "type": "acp",
+          "acp": {
+            "agent": "claude",
+            "backend": "acpx",
+            "mode": "on-demand",
+            "permissionMode": "approve-all"
+          }
+        }
+      },
+      {
+        "id": "tester",
+        "name": "Tester",
+        "emoji": "✅",
+        "model": {
+          "primary": "anthropic/claude-haiku-3-5",
+          "fallbacks": ["anthropic/claude-sonnet-4-6"]
+        },
+        "thinking": "medium",
+        "description": "Validateur - vérifie les critères d'acceptation des nœuds",
+        "tools": ["supabase", "test-runner"],
+        "runtime": {
+          "type": "acp",
+          "acp": {
+            "agent": "claude",
+            "backend": "acpx",
+            "mode": "on-demand",
+            "permissionMode": "approve-all"
+          }
+        }
+      },
+      {
+        "id": "louix",
+        "name": "Louix",
+        "emoji": "🎨",
+        "model": {
+          "primary": "anthropic/claude-sonnet-4-6",
+          "vision": true
+        },
+        "thinking": "high",
+        "description": "Validateur UI/UX - validation visuelle des composants",
+        "tools": ["browser", "screenshot", "visual-analysis"],
+        "runtime": {
+          "type": "acp",
+          "acp": {
+            "agent": "claude",
+            "backend": "acpx",
+            "mode": "on-demand",
+            "permissionMode": "approve-all",
+            "session": "louix-ui-validator"
+          }
+        },
+        "constraints": {
+          "maxConcurrent": 1,
+          "requiresVision": true
+        }
+      }
+    ]
+  },
+  
+  "integrations": {
+    "supabase": {
+      "url": "${SUPABASE_URL:-https://localhost:8000}",
+      "anonKey": "${SUPABASE_ANON_KEY}",
+      "serviceRoleKey": "${SUPABASE_SERVICE_ROLE_KEY}",
+      "tables": {
+        "project_tree": "project_tree",
+        "project_metrics": "project_metrics",
+        "decision_cache": "decision_cache",
+        "project_budgets": "project_budgets"
+      }
+    },
+    "redis": {
+      "url": "${REDIS_URL:-redis://localhost:6379}",
+      "ttl": {
+        "technical_decisions": "7d",
+        "architecture_decisions": "30d",
+        "pricing": "1d"
+      }
+    },
+    "prometheus": {
+      "url": "${PROMETHEUS_URL:-http://localhost:9090}",
+      "metricsPrefix": "magalie"
+    },
+    "grafana": {
+      "url": "${GRAFANA_URL:-http://localhost:3001}",
+      "dashboardId": "magalie-overview"
+    },
+    "git": {
+      "remote": "origin",
+      "mainBranch": "main",
+      "featureBranchPrefix": "feature/node-"
+    }
+  },
+  
+  "channels": {
+    "internal": {
+      "discord": {
+        "webhook": "${DISCORD_MAGALIE_WEBHOOK}",
+        "alertsChannel": "magalie-alerts",
+        "updatesChannel": "magalie-updates"
+      },
+      "telegram": {
+        "botToken": "${TELEGRAM_BOT_TOKEN}",
+        "chatId": "${TELEGRAM_CHAT_ID}"
+      }
+    },
+    "routing": {
+      "rules": [
+        {
+          "agent": "magalie",
+          "channels": ["opus", "code"],
+          "priority": "opus"
+        },
+        {
+          "agent": "bob",
+          "channels": ["code"],
+          "priority": "code"
+        },
+        {
+          "agent": "louix",
+          "channels": ["opus"],
+          "priority": "opus"
+        }
+      ]
+    }
+  },
+  
+  "budgeting": {
+    "defaultAllocation": {
+      "tokens": 100000,
+      "dollars": 10.00
+    },
+    "alertThresholds": {
+      "warning": 80,
+      "critical": 95
+    },
+    "costOptimization": {
+      "modelSelection": {
+        "haiku": {"maxComplexity": 2, "costPerMTok": 0.25},
+        "sonnet": {"minComplexity": 2, "maxComplexity": 4, "costPerMTok": 3.00},
+        "opus": {"minComplexity": 4, "costPerMTok": 15.00}
+      }
+    }
+  },
+  
+  "monitoring": {
+    "metrics": {
+      "collectionInterval": "30s",
+      "retention": "30d"
+    },
+    "alerts": {
+      "enabled": true,
+      "providers": ["discord", "telegram"],
+      "rules": [
+        {
+          "name": "BudgetWarning",
+          "expr": "magalie_budget_remaining / magalie_budget_allocated < 0.2",
+          "severity": "warning",
+          "cooldown": "1h"
+        },
+        {
+          "name": "BuildStuck",
+          "expr": "magalie_nodes_processing > 0 AND increase(magalie_build_duration_seconds[15m]) == 0",
+          "severity": "critical",
+          "cooldown": "30m"
+        },
+        {
+          "name": "ServiceDown",
+          "expr": "up{service=~\"supabase|redis|prometheus\"} == 0",
+          "severity": "critical",
+          "cooldown": "5m"
+        }
+      ]
+    }
+  },
+  
+  "features": {
+    "autoScaling": {
+      "enabled": true,
+      "minInstances": 2,
+      "maxInstances": 6,
+      "scaleUpThreshold": 0.7,
+      "scaleDownThreshold": 0.3
+    },
+    "caching": {
+      "enabled": true,
+      "provider": "redis",
+      "fallback": "supabase"
+    },
+    "autoHealing": {
+      "enabled": true,
+      "maxRetries": 3,
+      "backoffStrategy": "exponential"
+    },
+    "documentation": {
+      "autoGenerate": true,
+      "updateTriggers": ["state_change", "decision", "budget_threshold", "commit"]
+    }
+  }
+}
