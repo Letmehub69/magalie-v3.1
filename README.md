@@ -1,3 +1,7 @@
+# Archived Research Workspace
+
+This public research workspace is closed for active development as of 2026-05-05. See ARCHIVE.md for the lab reopen checklist and security notes.
+
 # FitMaster Pro - Application d'entraînement Premium
 
 ![FitMaster Pro](https://img.shields.io/badge/FitMaster-Pro-blue)
