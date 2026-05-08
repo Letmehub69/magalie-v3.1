@@ -1,72 +1,39 @@
-# Archived Research Workspace
+# IRIELLE
 
-This public research workspace is closed for active development as of 2026-05-05. See ARCHIVE.md for the lab reopen checklist and security notes.
+Irielle est un **command center personnel alimenté par IA** avec mémoire, outils, automatisations, sécurité et agents spécialisés.
 
-# FitMaster Pro - Application d'entraînement Premium
+## Vision
 
-![FitMaster Pro](https://img.shields.io/badge/FitMaster-Pro-blue)
-![Version](https://img.shields.io/badge/Version-2.0-green)
-![License](https://img.shields.io/badge/License-MIT-yellow)
+Construire un assistant personnel agentique multi-plateforme (web/PWA, mobile, CLI, desktop futur) qui reste:
 
-## 🏋️‍♂️ Application complète d'entraînement avec suivi avancé
+- utile et concret;
+- sécurisé par défaut;
+- contrôlé par permissions et approbations;
+- extensible par modules/skills.
 
-FitMaster Pro est une application web moderne pour gérer tes séances d'entraînement avec :
+## Statut du projet
 
-### ✨ Fonctionnalités principales
+Ce dépôt entre dans une phase de refondation orientée IRIELLE v0.1. Les bases documentaires, l'architecture cible et les règles de sécurité sont définies dans les documents suivants :
 
-- ✅ **Système d'authentification** - Comptes utilisateurs sécurisés
-- ✅ **2000 exercices** - 100 pages × 20 exercices par page
-- ✅ **Timers intelligents** - Compte à rebours avec notifications sonores
-- ✅ **Design premium** - Interface glassmorphism avec dégradés
-- ✅ **Statistiques en temps réel** - Suivi de la progression
-- ✅ **Sauvegarde automatique** - Données persistantes par utilisateur
-- ✅ **Responsive** - Optimisé pour mobile, tablette et desktop
-- ✅ **100% gratuit** - Pas d'abonnement, pas de frais cachés
+- `PROJECT.md`
+- `ARCHITECTURE.md`
+- `SECURITY.md`
+- `ROADMAP.md`
+- `NEXT_STEPS.md`
+- `IRIELLE_SYSTEM_PROMPT.md`
 
-### 🚀 Comment utiliser
+## MVP v0.1 (objectif)
 
-1. **Crée un compte** ou connecte-toi
-2. **Ajoute tes exercices** (saisie libre)
-3. **Configure les timers** de repos (30s à 120s)
-4. **Démarre l'entraînement** avec notifications sonores
-5. **Navigue entre les pages** pour organiser tes séances
+- Chat utilisateur ↔ Irielle avec persistance des messages.
+- Gestion initiale: todos, notes, memory.
+- Timeline des actions + approbations (approve/deny).
+- Journal d'audit avec redaction des secrets.
+- Security Center avec emergency stop.
+- Mode mock si aucune clé OpenAI n'est configurée.
 
-### 🔒 Sécurité et confidentialité
+## Principes de développement
 
-- Données stockées localement dans ton navigateur
-- Pas de collecte de données personnelles
-- Nettoyage automatique des comptes inactifs (>6 mois)
-- Pas de connexion internet nécessaire après chargement
-
-### 🌐 Technologies utilisées
-
-- HTML5, CSS3, JavaScript (Vanilla)
-- Web Audio API pour les notifications sonores
-- localStorage pour la persistance des données
-- Design système avec variables CSS
-- Font Awesome pour les icônes
-
-### 📱 Compatibilité
-
-- Chrome, Firefox, Safari, Edge
-- iOS, Android, Windows, macOS
-- Toutes les tailles d'écran
-
-### 🎯 Pour qui ?
-
-- **Débutants** qui veulent structurer leurs entraînements
-- **Athlètes** qui suivent des programmes spécifiques
-- **Coachs** qui veulent un outil simple pour leurs clients
-- **Tout le monde** qui veut progresser en fitness
-
-### 🔗 Lien de l'application
-
-👉 **[https://fitmaster-pro.netlify.app](https://fitmaster-pro.netlify.app)**
-
-### 📄 Licence
-
-MIT License - Libre d'utilisation, modification et distribution
-
----
-
-**Développé avec ❤️ pour la communauté fitness** 🏆
+1. Incréments petits et testables.
+2. Pas de fausses promesses (stubs explicitement marqués).
+3. Confirmation avant toute action risquée.
+4. Documentation et `NEXT_STEPS.md` maintenus à jour à chaque sprint.
