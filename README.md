@@ -37,3 +37,8 @@ Ce dépôt entre dans une phase de refondation orientée IRIELLE v0.1. Les bases
 2. Pas de fausses promesses (stubs explicitement marqués).
 3. Confirmation avant toute action risquée.
 4. Documentation et `NEXT_STEPS.md` maintenus à jour à chaque sprint.
+
+## Base44 Delivery Prompt
+
+Le prompt maître Base44 pour le Lot 1 est versionné dans `BASE44_LOT1_MASTER_PROMPT.md`.
+Utiliser ce fichier comme source de vérité pour lancer la construction initiale dans Base44 (mode Plan/Discuss puis Build).
